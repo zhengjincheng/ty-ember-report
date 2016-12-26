@@ -1,0 +1,68 @@
+      <div class="tyc-header clear">
+        <a href="http://www.tingyun.com" class="tyc-logo float-left" target="_blank">
+          <img src="/assets/images/tyc-logo.png" width="82" height="30" />
+        </a>
+        <div id="tyc-pro-cur" class="tyc-pro-cur float-left">
+        <a href="javascript:void();" class="tyc-pro-cur-a">Server</a> 
+        <span id="tyc-pro-cur-arrow" class="tyc-pro-arrow"></span></div>
+        <ul class="tyc-nav-pro" id="tyc-nav-pro" style="display: none;">
+          <li>
+            <a target="_blank" href="http://localhost:8080/mobile">App</a>
+          </li>
+          <li>
+            <a class="pro-current" href="">Server</a>
+          </li>
+          <li>
+            <a target="_blank" href="">Browser</a>
+          </li>
+          <!-- 在阿里平台下不展示Network-->
+          <li>
+            <a target="_blank" href="http://localhost:8080/network">Network</a>
+          </li>
+          <li>
+            <a target="_blank" href="http://localhost:8080/sys">Sys</a>
+          </li>
+        </ul>
+		<ul class="tyc-mainmenu float-left">
+         {{#each menus.menu as |menu|}}
+		   <li><a class="{{menu.icon}} {{menu.activecss}}" {{action "handletracnsition" menu.action}} style="cursor:pointer">{{menu.label}} </a> </li>
+		 {{/each}}
+        </ul>
+        <ul class="tyc-rightmenu float-right">
+		<li class="tyc-user">
+			<div class="tyc-user-icon"></div>
+			<ul class="tyc-user-list">
+				<!-- 在阿里平台下不展示用户中心-->				
+				<li><a target="_blank" href="http://saaslocal.tingyun.com:8080/lens-saas/userService/myproduct">用户中心</a></li>
+				<li><a target="_blank" href="http://saaslocal.tingyun.com:8080/lens-saas/userCenter/updatePassword">修改密码</a></li>				
+				<li><a target="_blank" href="/report-server/authKey">修改授权码</a></li>
+				<li><a href="javascript:void(0);" id="logout_click">退出</a></li>
+			</ul>
+		</li>
+		<li>	
+				<div class="tyc-lang">
+					<a {{action 'setlocal'}} langvalue="_zh" class="{{if isEnglish 'tyc-icon-cn' 'tyc-icon-en'}} language"></a>
+				</div>
+		</li>
+		<li>
+			<a target="_blank" href="http://doc.tingyun.com/help/html/doc/server.html" class="tyc-rightmenu-a tyc-a-help">
+				<span class="tyc-a-icon tyc-a-icon-help"></span>
+				<span>帮助</span>
+			</a>
+		</li>
+		<li>
+			<a target="_blank" href="/download/serverSdk" class="tyc-rightmenu-a tyc-a-download">
+				<span class="tyc-a-icon tyc-a-icon-download"></span>
+				<span>探针下载</span>
+			</a>
+		</li>
+		<li>
+			<a target="_blank" href="http://reportlocal.tingyun.com/tingyun-report-alarm/alarm/list" class="tyc-rightmenu-a tyc-a-alarm">
+					<span class="tyc-a-icon tyc-a-icon-alarm">						
+					</span>
+				<span>告警</span>
+			</a>
+		</li>
+	</ul>
+      </div>
+{{yield}}

@@ -1,0 +1,12 @@
+    <div class="container">
+		{{#ty-header menus=model}}
+		{{/ty-header}}
+      <div class="bodyq tyc-container clear">
+		<!--左边框-->
+		{{#ty-sidebar menus=model.menu2}}{{/ty-sidebar}}
+			{{outlet}}
+		
+		<!--footer-->
+		{{#ty-footer}}{{/ty-footer}}
+	  </div>
+    </div>

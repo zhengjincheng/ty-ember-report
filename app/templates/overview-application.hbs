@@ -1,0 +1,312 @@
+    <div class="container">
+		{{#ty-header menus=model.menu}}
+		{{/ty-header}}
+      <div class="bodyq tyc-container clear">
+		<!--左边框-->
+		{{#ty-sidebar menus=model.menu.menu2 onExpanded=(action "onExpanded")}}{{/ty-sidebar}}
+	  {{outlet}}
+      <div class="tyc-main {{if isMin  '' 'tyc-main-min' }}">
+        <!--通知 str-->
+        <!--通知 end-->
+        <div class="tyc-main-content">
+
+          <div class="rum_page_container rum-page-doc" id="appOverview">
+		  <div style="position:relative">
+		  {{#if isInstall }}
+			{{#ty-install-app onback=(action "onBack")    }}{{/ty-install-app}} 
+		{{/if}}
+		  </div>
+            <div class="rum-page {{if isInstall  "hidden" " "}}" page_no="1">
+              <div class="title_mobile_w_new">
+                <div class="title_report_server">应用列表(最近30分钟)</div>
+                <!-- <input  type="text" oninput="" class="changeUrl"  style="width: 200px;"> -->
+                <div class="float_right">
+				<style>
+                .changeUrl_position {
+                       width: 200px;margin-top: 2px;
+                }
+				</style>
+                {{input type="text" class="changeUrl changeUrl_position"  key-up=(action 'filterbyName')  value=queryAppname}}
+				<span class="tab_content_font4" style="width: 15px;">&nbsp;&nbsp;</span>
+                <div id="open" onmouseover="this.className=&#39;btn_add02&#39;" onmouseout="this.className=&#39;btn_add01&#39;"
+                class="btn_add01" {{action 'installNew' }}>新建应用</div>
+                <!-- </a> --></div>
+              </div>
+              <div id="appStatList" url="/report-server/overview/newAppListPage">
+                <style>
+                .toggle1 {
+                        display: none;
+                }
+                .table_01 th{color: #666666;}
+							
+				</style>
+                <div class="rightbox">
+                  <table id="applicationList" class="forTip table_01 m_top10 tablesorter tablesorter-metro-light" width="100%"
+                  border="0" cellspacing="0" cellpadding="0" role="grid">
+                    <colgroup></colgroup>
+                    <thead>
+                      <tr class="tablesorter-headerRow" role="row">
+                        <th class="alarmStatus sorter-false tablesorter-header  tablesorter-headerUnSorted"
+                        style="width: 55%; -webkit-user-select: none;" data-column="0" tabindex="0" scope="col" role="columnheader"
+                        aria-disabled="true" unselectable="on" aria-sort="none"  >
+                          <div class="tablesorter-header-inner"></div>
+                        </th>
+                        <th style="width: 13%; -webkit-user-select: none;"
+                        class="td_textalgin_r tablesorter-header {{index-value responseTimeTotalstate 'tablesorter-headerUnSorted' 'tablesorter-headerAsc' 'tablesorter-headerDesc'}}" data-column="1" tabindex="0"
+                        scope="col" role="columnheader" aria-disabled="false" aria-controls="applicationList" unselectable="on"
+                        aria-sort="none" aria-label=" 响应时间(ms) : No sort applied, activate to apply an ascending sort" {{action "orderby" 'responseTimeTotal'}}>
+                          <div class="tablesorter-header-inner">
+                            <span class="basedonTip"
+                            title="应用服务器从收到请求到返回响应的时间">响应时间(ms)</span>
+                          </div>
+                        </th>
+                        <th style="width: 7%; -webkit-user-select: none;"
+                        class="td_textalgin_r tablesorter-header {{index-value apdexstate 'tablesorter-headerUnSorted' 'tablesorter-headerAsc' 'tablesorter-headerDesc'}}" data-column="2" tabindex="0"
+                        scope="col" role="columnheader" aria-disabled="false" aria-controls="applicationList" unselectable="on"
+                        aria-sort="none" aria-label=" Apdex : No sort applied, activate to apply an ascending sort" {{action "orderby" 'apdex'}}>
+                          <div class="tablesorter-header-inner">
+                            <span class="basedonTip" title="Apdex&#39;&gt;">Apdex</span>
+                          </div>
+                        </th>
+                        <th style="width: 9%; -webkit-user-select: none;"
+                        class="td_textalgin_r tablesorter-header {{index-value errorRatestate 'tablesorter-headerUnSorted' 'tablesorter-headerAsc' 'tablesorter-headerDesc'}}" data-column="3" tabindex="0"
+                        scope="col" role="columnheader" aria-disabled="false" aria-controls="applicationList" unselectable="on"
+                        aria-sort="none" aria-label=" 错误率(%) : No sort applied, activate to apply an ascending sort" {{action "orderby" 'errorRate'}}>
+                          <div class="tablesorter-header-inner">
+                            <span class="basedonTip"
+                            title="应用过程的错误率，指该应用过程在应用服务器端每分钟发生的错误或异常数量占总请求数量的百分比">
+                            错误率(%)</span>
+                          </div>
+                        </th>
+                        <th style="width: 10%; -webkit-user-select: none;"
+                        class="td_textalgin_r tablesorter-header {{index-value throughputstate 'tablesorter-headerUnSorted' 'tablesorter-headerAsc' 'tablesorter-headerDesc'}}" data-column="4" tabindex="0"
+                        scope="col" role="columnheader" aria-disabled="false" aria-controls="applicationList" unselectable="on"
+                        aria-sort="none" aria-label=" 吞吐率(rpm) : No sort applied, activate to apply an ascending sort" {{action "orderby" 'throughput'}}>
+                          <div class="tablesorter-header-inner">
+                            <span class="basedonTip" title="每分钟接收请求的数量">吞吐率(rpm)</span>
+                          </div>
+                        </th>
+                        <th class="sorter-false td_textalgin_c tablesorter-header tablesorter-headerUnSorted"
+                        style="width: 6%; -webkit-user-select: none;" data-column="5" tabindex="0" scope="col" role="columnheader"
+                        aria-disabled="true" unselectable="on" aria-sort="none">
+                          <div class="tablesorter-header-inner">
+                            <div style="text-align: right">操作</div>
+                          </div>
+                        </th>
+                      </tr>
+                    </thead>
+                    <tbody id="hasDataTbody" aria-live="polite" aria-relevant="all">
+                      <!--（24小时没有数据） -> 隐藏 -->
+                      <!-- IE9下 </td><td>直接不能有回车，否则显示的列表会错位 -->
+                    </tbody>
+					{{#each v_apps as |item|}}
+                    <tbody id="hasDataTbody" class="tablesorter-no-sort">
+                      <tr class="{{if-true item.hasDataInLast24Hour '||' isExpanded 'hasData' 'toggle1' }} ">
+                        <td>
+                          <div class="overviewTableTD marginT index-application-list">
+                          <span id="doMore0" appid="{{item.id}}" idx="0" class="{{if-true item.responseTimeTotal 'fenlei_add' 'fenlei_no_add' }} domore fenlei_minus_current " {{action 'toggleApp' item}}></span> 
+                          <span class="fenlei_title title">
+                            <a class="strong" href="/report-server/application/{{item.id}}/overview">
+                              <div style="display: inline-block;" type="appNameTooltip"
+                              status="JAVA应用，运行在0个主机上（0个实例）">
+                                <span class="fenlei_title title">
+                                  <span class="fenlei_title title">{{item.name}}</span>
+                                </span>
+                              </div>
+                            </a>
+                          </span>
+						  <span class="icon icon-{{to-lowercase item.language}}" ></span>
+						  <!--todo- progressbar-->
+						  {{#if item.responseTimeTotal}}
+						 {{#ty-progressbar data=item.dataMini id=item.id }}
+						 
+						 {{/ty-progressbar}}
+						  {{/if}}
+						  
+						  </div>
+                        </td>
+						{{#if item.responseTimeTotal}}
+								<td class="td_bor_l">
+										<div class="digital_w marginT">{{item.responseTimeTotal}}</div>
+								</td>
+								<td class="td_bor_l">
+										<div class="digital_w marginT">{{item.apdex}} </div>
+								</td>
+								<td class="td_bor_l">
+										<div class="digital_w marginT">{{item.errorRate}}</div>
+								</td>
+								<td class="td_bor_l">
+										<div class="digital_w marginT">{{item.throughput}}</div>
+								</td>
+						{{else}}
+						
+							<td class="td_bor_l nosort" colspan="4" style="text-align: center;">
+											<div class="digital_w marginT">
+												<p class="nodataTips">
+													
+													{{#if item.hasDataInLast24Hour }}
+														此应用30分钟之内暂无数据
+													{{else}}
+														 此应用24小时之内暂无数据
+													{{/if}}
+													
+													{{#if (has-permission 'application|operators')}}
+															<!--<c:when test="${applicationStat.application.status==1}       0">-->
+															{{#if (if-true item.status '===' '1' 'true' 'false')}}
+																<em class="span_button" {{action "modifyApplication" item 0}}>
+																	<!--<fmt:message key='nb.message.index.application.disabled'/>-->禁用
+																</em>
+															{{else}}
+																<em class="span_button" {{action "modifyApplication" item 1}}>
+																	启用
+																</em>
+															{{/if}}
+													{{/if}}
+												
+												</p>
+											</div>
+							</td>
+						{{/if}}
+						<!--
+                        <td class="td_bor_l nosort" colspan="4" style="text-align: center;">
+                          <div class="digital_w marginT">
+                            <p class="nodataTips">此应用30分钟之内暂无数据。 
+                            <em class="span_button" onclick="javascript:modifyApplication(126968 ,&#39;0&#39;)">禁用</em></p>
+                          </div>
+                        </td>
+						-->
+						{{#if (has-permission 'application|operators')}}
+									<td class="td_bor_l">
+										<div class="marginT digital_w operatorDiv" style="position: relative;"  >
+										   <span class="fenlei_right" type="operator" ></span>
+						                   <ul class="new_gongneng" type="operator" >
+						                   			{{#if (if-true item.status '===' '1' 'true' 'false')}}
+						                   				<li class="li_gongneng5" {{action "modifyApplication" item 0}}>禁用</li>
+						                   				<li class="li_gongneng1" onclick="settingConfig(${applicationStat.application.id});">设置</li>
+						                   			{{else}}
+						                   				<li class="li_gongneng4" {{action "modifyApplication" item 1}}>启用</li>
+						                   			{{/if}}
+						                   		<li class="li_gongneng3" {{action "modifyApplication" item -1}}>删除</li>
+						                   </ul>
+										</div>
+									</td>
+					    {{/if}}
+                      </tr>
+					  <!-- 展开的详细视图 -->
+					  {{#if item.responseTimeTotal}}
+					  
+					  <tr class="append" style="display: {{if-true item.isExpanded " " "none"}} ;">
+						<td colspan="6">
+						<table width="100%" height="200px" style="border: 1px solid #eee;">
+								<tbody>
+									<tr>
+									<td>
+									 {{#ty-progressbar2  id=item.id }}
+									 {{/ty-progressbar2}}
+									
+									</td>
+									</tr>
+								</tbody>
+						</table>
+							
+						</td>
+					  </tr>
+					  
+					  {{/if}}
+                    </tbody>
+					{{/each}}
+                  </table>
+                <div class="showfongt_w" style="display: block;">注：将24小时内无数据的应用隐藏。 
+                  {{#if isExpanded}}
+				  <a {{action "toggleBody"}} id="showHide" herf="">隐藏</a>
+				  {{else}}
+				  <a {{action "toggleBody"}} id="showHide">显示 
+                  <b>{{appsum}}</b> 个隐藏的应用</a>
+				  {{/if}}
+				  </div>
+				  
+				  
+                </div>
+                <div id="statTooltip" class="tooltip2" style="margin: 20px; float: left; display: none; position: absolute;">
+                  <div class="icon_arrow"></div>
+                  <div id="tooltipContent" style="float: left;">正常</div>
+                </div>
+                <div id="nameTooltip" class="tooltip2" style="margin: 20px; float: left; display: none; position: absolute;">
+                  <div class="icon_arrow"></div>
+                  <div id="nameTooltip_content" style="float: left;">正常</div>
+                </div>
+                <!-- <div class="rumChartReport_model" style="display:none;"><div id="loading" style="display:none;"></div></div> -->
+              </div>
+              <div class="float_left" style="width: 100%;">
+                <h2 class="m_top10">最近事件一览（最近2周）</h2>
+                <div class="submenu_tab_w event_container">
+                  <div class="submenu_tab">
+                    <ul class="eventScope">
+                      <li type="all" class="all"
+                      url="http://reportlocal.tingyun.com/tingyun-report-alarm/events/recent/application/all" data_remote="true"
+                      id="current">
+                        <a href="javascript:void(0);">
+                          <div class="tab_2">所有 
+                          <span id="allCounter"></span></div>
+                        </a>
+                      </li>
+                      <li type="warning" class="warning"
+                      url="http://reportlocal.tingyun.com/tingyun-report-alarm/events/recent/application/warning"
+                      data_remote="true">
+                        <a href="javascript:void(0);">
+                          <div class="tab_d2">警告 
+                          <span id="warningCounter"></span></div>
+                        </a>
+                      </li>
+                      <li type="critical" class="critical"
+                      url="http://reportlocal.tingyun.com/tingyun-report-alarm/events/recent/application/critical"
+                      data_remote="true">
+                        <a href="javascript:void(0);">
+                          <div class="tab_c2">严重问题 
+                          <span id="criticalCounter"></span></div>
+                        </a>
+                      </li>
+                      <li type="alarm" class="alarm"
+                      url="http://reportlocal.tingyun.com/tingyun-report-alarm/events/recent/application/alarm" data_remote="true">
+                        <a href="javascript:void(0);">
+                          <div class="tab_a2">报警通知 
+                          <span id="alarmCounter"></span></div>
+                        </a>
+                      </li>
+                      <li type="config" class="config"
+                      url="http://reportlocal.tingyun.com/tingyun-report-alarm/events/recent/application/config"
+                      data_remote="true">
+                        <a href="javascript:void(0);">
+                          <div class="tab_f2">配置更改 
+                          <span id="configCounter"></span></div>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="tab_content_w" type="all" style="display: block;">
+                    <div class="waitting_box" style="height: 200px;float:left;margin-top: 10px;width:100%;">
+                      <div style="width: 50px;margin: 0 auto;"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="waitting">
+                  <div class="waitting_box" style="height: 200px;float:left;margin-top: 10px;width:100%;display: none;">
+                    <div style="width: 50px;margin: 0 auto;"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div style="clear: both;"></div>
+        </div>
+      </div>
+	  {{#if isShowingModal}}
+		  {{#comfirm-dialog  onCancel=(action "onCancle")  onOk=(action "onOK") title=data.title message=data.message token=data.token}}
+
+		  {{/comfirm-dialog}}
+	  {{/if}}
+	  <!--footer-->
+		{{#ty-footer}}{{/ty-footer}}
+	  </div>
+    </div>
+	

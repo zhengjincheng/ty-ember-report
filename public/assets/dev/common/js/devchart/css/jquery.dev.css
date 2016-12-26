@@ -1,0 +1,280 @@
+
+.dev-chart-tooltip{
+	background-color: rgba(255, 255, 255, 1);
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 1);
+	width:440px;
+	font-size:12px;
+    font-family: Arial,Helvetica,sans-serif !important;
+ }
+.dev-chart-tooltip .number-block-box{
+	width:430px;
+	float:left;
+    margin: 0px 5px 0px 5px;
+    padding-bottom: 10px;
+    border-bottom: #cccccc 1px solid;
+}
+.dev-chart-tooltip .number_block{
+	width:96px;
+	float:left;
+	text-align:center;
+    padding: 0px 5px 0px 5px;
+    margin-top: 10px;
+}
+.dev-chart-tooltip  .value-box .value{
+    color: #747476;
+    font-size:24px;
+    font-weight: bold;
+}
+.dev-chart-tooltip .value-name{
+    color: #969a9d;
+    font-size:12px;
+    line-height: 16px;
+}
+
+
+.dev-chart-tooltip .value-box{
+margin: 0px;
+padding;0px;
+}
+
+.dev-chart-tooltip .thread{
+    width:420px;
+    float:left;
+    padding:0px 10px 0px 10px;
+    color: #747476;
+    font-size: 12px;
+    line-height:22px;
+   }
+
+.dev-chart-tooltip  .value-box .unit{
+    color: #969a9d;
+    font-size:12px;
+}
+
+.dev-chart-tooltip  .line{
+    border-right: #b6b8ba 1px solid;
+
+}
+
+.dev-chart-tooltip .network-table{
+	width:100%;
+	float:left;
+	font-size:12px;
+	border-collapse:collapse;
+}
+.dev-chart-tooltip .network-table tr td,.dev-chart-tooltip .network-table tr th{
+	border:1px #CFCFCF solid
+}
+
+.dev-chart-tooltip .network-table tr td.network-url{
+	text-align:left;
+    word-wrap:break-word;
+    word-break:break-all;
+}
+.dev-chart-tooltip .thread-method-name{
+    word-wrap:break-word;
+    word-break:break-all;
+    display:inline-block;
+}
+.dev-chart-tooltip .network-table tr td.network-duration{
+	text-align:center
+}
+
+.dev-chart-tooltip .network-table tr td.network-bytes{
+	text-align:center
+}
+
+.dev-chart-tooltip .network-table tr td.network-carrier{
+	text-align:center
+}
+
+.devchart-title-tooltip{
+	z-index:1000;
+	position: absolute;
+    top: -0.5em;
+    left: 2.5em;
+    width: auto;
+    padding: 0.2em 0.6em;
+    border: 1px solid #ccc;
+    background-color: rgba(255, 255, 255, 0.94);
+    color: #000;
+    opacity: 1;
+    border-radius: 5px;
+    box-shadow: 5px 5px 2.5px #888888;
+}
+
+.devchart-method-tooltip{
+	z-index:1000;
+	position: absolute;
+	background-color: rgba(255, 255, 255, 0.94);
+    border: 1px solid #ccc;
+    border-radius: 2px;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
+    font-family: Arial,Helvetica,sans-serif !important;
+}
+.devchart-method-tooltip .tooltip-header {
+	width:100%;
+}
+
+.devchart-method-tooltip .tooltip-header .close-button:hover{
+    background-position: right center;
+}
+
+.devchart-method-tooltip  .tooltip-header  .title{
+	margin: 9px 0 0 9px;
+    text-align: left;
+}
+
+.devchart-method-tooltip .bar-wrapper{
+	display: inline;
+    margin-right: 5em;
+    width: 12em;
+}
+.devchart-method-tooltip  .css-bar-chart{
+	display: inline-block;
+	border: 1px solid rgba(0, 0, 0, 0.25);
+    border-radius: 2px;
+	background: none repeat scroll 0 0 #fff;
+    border: 1px solid #ddd;
+    height: 16px;
+    position: relative;
+    width: 100px;
+}
+
+
+.devchart-method-tooltip  .css-bar-chart div{
+	background-color: rgba(4, 73, 95, 0.75);
+    height: 16px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    z-index: 5;
+}
+.devchart-method-tooltip  .css-bar-chart.network-bar div{
+    background-color: rgba(243, 157, 18, 0.75);
+}
+
+.devchart-method-tooltip .css-bar-chart span {
+    color: #aaa;
+    display: inline-block;
+    left: 102px;
+    position: relative;
+    text-align: right;
+    width: 4em;
+}
+
+.devchart-method-tooltip .arrow {
+   
+}
+.devchart-method-tooltip .arrow:before {
+    border-color: transparent transparent #fff;
+    border-style: solid;
+    border-width: 10px;
+    content: "";
+    display: block;
+    height: 0;
+    position: absolute;
+    width: 0;
+}
+.devchart-method-tooltip .arrow:before {
+    left: -10px;
+    top: -28px;
+    z-index: 1;
+}
+.devchart-method-tooltip .arrow:after {
+    border-color: transparent transparent #ccc;
+    border-style: solid;
+    border-width: 10px;
+    content: "";
+    display: block;
+    height: 0;
+    position: absolute;
+    width: 0;
+}
+
+.devchart-method-tooltip .tooltip-header  .tooltip-title{
+    font-size:24px;
+    font-weight: bold;
+    margin-top: 10px;
+    margin-left: 10px;
+    float: left;
+    margin-bottom: 10px;
+    color: #666666;
+}
+
+.devchart-method-tooltip .tooltip-header .duration{
+    float: right;
+    width: 50px;
+	height:40px;
+	margin-right:30px;
+    margin-top: 10px;
+    color:#666666;
+}	
+.devchart-method-tooltip .tooltip-header .duration-title{
+	font-size:10px;
+	line-height:10px;
+    margin-top: 4px;
+}
+.devchart-method-tooltip .tooltip-header  .duration-value{
+	font-size:12px;
+	line-height:12px;
+}
+.devchart-method-tooltip .tooltip-header .value-box .unit{
+	color: #333333;
+    font-size:18px;
+    line-height:18px;
+    font-weight:bold;
+}
+.devchart-method-tooltip .tooltip-header .close-button{
+	background-image: url("./imgs/icon-close-sprite.png");
+    background-position: left center;
+    background-repeat: no-repeat;
+    border-radius: 5px;
+    height: 32px;
+    overflow: hidden;
+    position: absolute;
+    right: 7px;
+    text-indent: -9999em;
+    top: 0;
+    width: 19px;
+    z-index: 2;
+}
+.devchart-method-tooltip{padding-bottom:10px;}
+
+
+.devchart-method-tooltip .method-table{
+	border-collapse: separate;
+    border-spacing: 0;
+    width:96%;
+    margin-left:2%;
+	font-size:12px;
+	border-collapse:collapse;
+    color: #666666;
+
+}
+.devchart-method-tooltip .method-table td {
+  line-height: 22px;
+}
+.devchart-method-tooltip .method-table tr:nth-child(2n+1) {
+    background-color: #fafafa;
+}
+.devchart-method-tooltip .method-table tr:nth-child(2n):hover{
+    background-color: #eff;
+}
+.devchart-method-tooltip .method-table tr td,.devchart-method-tooltip .method-table tr th{
+	border:1px #CFCFCF solid;
+    line-height: 22px;
+}
+.devchart-method-tooltip .method-table tr td.offset{
+	text-align:center
+}
+.devchart-method-tooltip .method-table tbody tr:first-child .method-name span{
+    font-weight:bold ;
+}
+.devchart-method-tooltip .method-table .method-name span{
+    word-wrap:break-word;
+    word-break:break-all;
+    display:inline-block;
+}

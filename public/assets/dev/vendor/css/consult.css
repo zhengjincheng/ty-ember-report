@@ -1,0 +1,38 @@
+/*单独一个按钮*/
+/*新增浮窗样式*/
+.fw-wrap{
+   position: fixed;
+   bottom: 72px;
+   right: 0;
+   z-index: 1000;
+}
+.fw-wrap>a{display: block;margin-bottom: 1px;}
+.fw-txt,.fw-btn{display: inline-block;}
+.fw-txt{
+   line-height: 50px;
+   color: #fff;
+   font-size: 16px;
+   margin-right: -3px;
+   width: 96px;
+   height: 50px;
+   text-align: center;
+   border-top-left-radius: 4px;
+   border-bottom-left-radius: 4px;
+   background: #1b86ca;
+   float: left;
+   display: none;
+ }
+.fw-btn{
+   width: 50px;
+   height: 50px;
+   background: #1b86ca;
+   border-top-left-radius: 4px;
+   border-bottom-left-radius: 4px;
+   float: right;
+ }
+.fw-online{background: url(../images/fw.png) 0 0 no-repeat #1b86ca;}
+.fw-survey{background: url(../images/fw.png) 0 -50px no-repeat #1b86ca;}
+.fw-top{background: url(../images/fw.png) 0 -100px no-repeat #1b86ca;}
+.clear{clear: both;}
+
+ 

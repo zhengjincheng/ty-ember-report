@@ -1,0 +1,70 @@
+/*header*/
+.tyc-header{width:100%;height:80px;border-bottom:4px solid #0085c9;position:relative; background-color:#fff;}
+.tyc-logo{width:82px;height:30px;padding:25px 19px;display:block;background:#0085c9;}
+.tyc-pro-cur{width:150px;height:80px;line-height:80px;padding-right:5px;text-align:center;border-right:2px solid #f2f2f2;font-size:18px;font-family:Arial;position:relative;margin-right:30px;}
+.tyc-pro-arrow{border-style:solid;border-width:8px 5px 0;border-color:transparent;border-top-color:#009fe8;position:absolute;top:50%;right:15px;margin-top:-4px;z-index:10;}
+.tyc-pro-arrow-active{border-style:solid;border-width:0 5px 8px;border-color:transparent;border-bottom-color:#009fe8;position:absolute;top:50%;right:15px;margin-top:-4px;z-index:10;}
+.tyc-pro-cur-a{color:#009fe8;}
+.tyc-pro-cur-a:hover{text-decoration:none;}                                    
+.tyc-nav-pro{width:100%;padding-left:145px;height:82px;box-sizing:border-box;-webkit-box-sizing:border-box;background:#0085c9;border-bottom:4px solid #0085c9;position:absolute;top:84px;left:0;z-index:1000;display:none;}
+.tyc-nav-pro>li{min-width:30px;height:78px;line-height:78px;float:left;margin-right:50px;}
+.tyc-nav-pro a{color:#96cee2;font-size:18px;font-family:Arial;min-width:30px;text-align:center;padding:10px;} 
+.tyc-nav-pro a:hover{text-decoration:none;color:#ffffff;}
+.tyc-mainmenu{min-width:300px;height:30px;margin-top:25px;}
+.tyc-mainmenu>li{min-width:30px;height:30px;float:left;}
+.tyc-mainmenu-a{font-size:14px;color:#666666;min-width:30px;height:30px;line-height:30px;display:inline-block;*display:inline;*zoom:1;}
+.tyc-mainmenu-a:hover{text-decoration:none;color:#009fe8;}
+.tyc-rightmenu{min-width:300px;height:80px;border-left:1px solid #f2f2f2;}
+.tyc-rightmenu>li{width:90px;height:80px;border-left:1px solid #f2f2f2;float:right;}
+.tyc-user{position:relative;cursor:pointer;}
+.tyc-user-icon{width:30px;height:30px;background:url(../images/tyc-header-icon.png) no-repeat center -180px #247dc1;border-radius:15px;margin:25px auto;}
+.tyc-user-list{width:100%;padding:5px 0;background:#0085c9;position:absolute;top:80px;right:0;z-index:1000;box-shadow:0 1px 5px 0 #444444;display:none;}
+.tyc-user-list>li{width:100%;text-indent:18px;height:30px;line-height:30px;}
+.tyc-user-list>li:hover{background:#13b2e2;} 
+.tyc-user-list a{color:#ffffff;}
+.tyc-user-list a:hover{text-decoration:none;color:#ffffff;}
+.tyc-user:hover .tyc-user-list{display:block;}
+.tyc-rightmenu-a{display:block;height:100%;box-sizing:border-box;-webkit-box-sizing:border-box;padding-top:25px;}
+.tyc-rightmenu-a:hover{text-decoration:none;padding-top:14px;}
+.tyc-rightmenu-a span{display:block;width:100%;height:30px;line-height:30px;} 
+.tyc-rightmenu-a .tyc-a-icon{width:30px;margin:0 auto;}
+.tyc-a-icon{background:url(../images/tyc-header-icon.png) no-repeat;}
+.tyc-a-icon-help{background-position:center -120px;}
+.tyc-a-help:hover .tyc-a-icon-help{background-position:center -150px;}
+.tyc-a-icon-download{background-position:center -60px;}
+.tyc-a-download:hover .tyc-a-icon-download{background-position:center -90px;}
+.tyc-a-icon-alarm{background-position:center 0;position:relative;}
+.tyc-a-alarm:hover .tyc-a-icon-alarm{background-position:center -30px;}
+.tyc-alarm-num{min-width:8px;height:18px;line-height:18px;padding:0 5px;font-style:normal;border-radius:9px;text-align:center;color:#f7f7f7;background:#eb694f;position:absolute;top:-6px;left:20px;z-index:100;}
+.tyc-rightmenu-a .tyc-a-icon+span{display:none;color:#666666;text-align:center;} 
+.tyc-rightmenu-a:hover .tyc-a-icon+span{display:block;}
+/*footer*/
+.tyc-footer{width:auto;padding:10px 30px 50px;background:#eeeeee;}
+.tyc-footer-con{height:30px;line-height:30px;text-align:right;}
+
+
+/*160601 控制台修改mianmenu样式*/
+.tyc-mainmenu>li+li{margin-left:40px;}
+.tyc-mainmenu-a{padding-left:30px;background:url(../images/tyc-mainmenu-server-icon.png) no-repeat;}
+.tyc-mainmenu-a.current{text-decoration:none;color:#009fe8;}
+
+/*server mainmenu*/
+.tyc-mainmenu-overview{background-position:left 0;}
+.tyc-mainmenu-overview:hover,.tyc-mainmenu-overview.current{background-position:left -30px;}
+.tyc-mainmenu-use{background-position:left -60px;}
+.tyc-mainmenu-use:hover,.tyc-mainmenu-use.current{background-position:left -90px;}
+.tyc-mainmenu-key-use{background-position:left -120px;}
+.tyc-mainmenu-key-use:hover,.tyc-mainmenu-key-use.current{background-position:left -150px;}
+.tyc-mainmenu-setting{background-position:left -180px;}
+.tyc-mainmenu-setting:hover,.tyc-mainmenu-setting.current{background-position:left -210px;}
+.tyc-mainmenu-download{background-position:left -240px;}
+.tyc-mainmenu-download:hover,.tyc-mainmenu-download.current{background-position:left -270px;}
+
+/*160705 中英文切换*/
+.tyc-lang{padding-top:25px;width:30px;margin:0 auto;}
+.tyc-icon-en,.tyc-icon-cn{width:30px;height:30px;display:block;background-image:url(../images/tyc-lang-icon.png);background-repeat:no-repeat;}
+.tyc-icon-en{background-position:center 4px;}
+.tyc-icon-en:hover{background-position:center -24px;}
+.tyc-icon-cn{background-position:center -52px;}
+.tyc-icon-cn:hover{background-position:center -80px;}
+

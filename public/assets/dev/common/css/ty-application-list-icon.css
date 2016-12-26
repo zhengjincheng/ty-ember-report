@@ -1,0 +1,36 @@
+.index-application-list .icon {
+    line-height: 40px;
+    display: inline-block;
+    float: left;
+    width: 30px;
+    height: 40px;
+    margin-top: 2px;
+    padding-left: 22px;
+    background: url(../../base/images/tyc-download-icon-server.png) no-repeat;
+}
+
+.index-application-list .icon-java {
+    background-position: -5px -36px;
+}
+
+.index-application-list .icon-aspnet {
+    padding-left: 30px;
+    background-position: 0 -180px;
+}
+
+.index-application-list .icon-nodejs {
+    background-position: -5px -252px;
+}
+
+.index-application-list .icon-python {
+    background-position: -5px -324px;
+}
+
+.index-application-list .icon-ruby {
+    background-position: -5px -396px;
+}
+
+.index-application-list .icon-php {
+    padding-left: 26px;
+    background-position: -5px -108px;
+}

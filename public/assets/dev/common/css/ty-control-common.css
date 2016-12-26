@@ -1,0 +1,63 @@
+@charset "utf-8";
+/* CSS Document */
+html,body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,input,textarea,p,table,tr,th,td,span,strong,em{padding:0;margin:0;font-style:normal;}
+body{font-size:12px;font-family:"Microsoft YaHei","Arial","lucida Grande","Verdana";color:#666666;min-width:1200px;}
+img{border:0;vertical-align:middle;max-width:100%;} 
+ol,ul,li{list-style:none;} 
+h1,h2,h3,h4,h5,h6{font-weight:normal;font-size:100%;}   
+a{text-decoration:none;outline:none;}
+a:link,a:visited{text-decoration:none;}
+a:hover{text-decoration:underline;}
+a:active{text-decoration:none;} 
+.clear:after{content:" ";height:0;display:block;clear:both;visibility:hidden;overflow:hidden;}
+.clear{*zoom:1;}  
+.float-left{float:left;}
+.float-right{float:right;}
+.br5{border-radius:5px;}
+.plr25{padding-left:25px;padding-right:25px;}
+.ml25{margin-left:25px;}
+.mb30{margin-bottom:30px;}
+.tyc-main-content{padding:12px 25px 20px 20px;width:auto;border-radius:5px;background:#ffffff;}
+.tyc-bg-green{background-color:#77bfab;}
+.tyc-bg-yellow{background-color:#deca57;}
+.tyc-bg-orange{background-color:#eb694f;}
+.tyc-bg-lightgreen{background:#a3c06f;}
+.tyc-bg-purple{background:#ab80b6;}
+.tyc-bg-blue{background:#5faee1;}
+.tyc-bg-lightblue{background:#7dcaef;}
+.tyc-bg-lightorange{background:#f29a45;}
+.tyc-bg-bluepurple{background:#7d90c3;}
+.tyc-bg-darkgreen{background:#1bb192;}
+.tyc-bg-red{background:#ea625d;}
+.tyc-bg-other{background:#98abc2;}
+.tyc-color-orange{color:#eb694f;}
+.tyc-color-green{color:#77bfab;}
+.tyc-color-yellow{color:#deca57;} 
+.tyc-main-title{height:30px;line-height:30px;font-size:18px;}
+.tyc-main-postitle{height:30px;line-height:30px;font-size:18px;text-indent:15px;position:relative;}
+.tyc-btn-orange{min-width:30px;padding:0 15px;text-align:center;height:30px;line-height:30px;border-radius:3px;background:#eb694f;cursor:pointer;color:#fff;}
+.tyc-btn-orange:hover{background:#ef8772;}
+/*内容区*/
+.tyc-container{padding:30px 0;background:#eeeeee;}
+/*右侧内容区*/
+.tyc-main{width:auto;margin:0 30px 0 150px;} 
+.tyc-main-min{width:auto;margin:0 30px 0 85px;}
+/*青色多选框样式*/
+.tyc-check-div{height:30px;min-width:100px;margin-left:45px;}
+.tyc-check-green{margin-top:9px;width:12px;height:12px;position:relative;}
+.tyc-check-green input{position:absolute;top:0;left:0;z-index:10;visibility:visible;opacity:0;filter:alpha(opacity=0);outline:none;}
+.tyc-check-green span{width:11px;height:11px;display:block;border:1px solid #77bfab;position:absolute;top:0;left:0;z-index:2;}
+.tyc-check-green span:after{content:"";width:7px;height:7px;display:block;background:#77bfab;position:absolute;top:2px;left:2px;z-index:2;display:none;}
+.tyc-check-green input[type=checkbox]:checked+span:after{display:block;}
+.tyc-check-green-label{display:block;min-width:20px;height:30px;line-height:30px;margin-left:5px;} 
+/*加载更多按钮*/
+.tyc-morebtn{height:34px;line-height:34px;text-align:center;background:#f9f9f9;margin-top:20px;cursor:pointer;}
+.tyc-morebtn:hover{background:#f1f1f1;}
+.tyc-morebtn span{color:#0085c9;} 
+/*图表标题*/ 
+.tyc-main-postitle-box{height:30px;}
+.tyc-main-postitle-box .tyc-main-postitle{text-indent:0;min-width:10px;padding-right:20px;display:inline-block;*display:inline;*zoom:1;}
+.tyc-main-postitle-box .tyc-help-icon{width:14px;height:16px;display:block;background:url(../images/tyc-state-icon.png) no-repeat center -654px;position:absolute;top:7px;right:0;cursor:pointer;} 
+.tyc-main-postitle-box .tyc-help-note{text-indent:0;border-radius:3px;background:#98abc2;width:350px;padding:2px 8px;line-height:20px;font-size:12px;color:#fff;position:absolute;top:26px;left:-10px;z-index:100;display:none;}
+.tyc-main-postitle-box .tyc-help-arrow{border-width:0 8px 8px 8px;border-style:solid;border-color:transparent;border-bottom-color:#98abc2;position:absolute;top:20px;left:50%;margin-left:-9px;z-index:100;display:none;}
+.tyc-help-icon:hover .tyc-help-arrow,.tyc-help-icon:hover .tyc-help-note{display:block;}

@@ -1,0 +1,110 @@
+.ztree * {margin:0; padding:0;}
+.ztree{padding:0px; border:0px; list-style-type:none; font-family:Arial, Helvetica, sans-serif!important; font-family: "宋体","SimSun"; font-size:12px;color:#4D4D4D;}
+.ztree ul,.ztree ol{padding:0px; border:0px; list-style-type:none;}
+.ztree li{width:100%; float:left; margin:0; padding:0;outline: none}
+
+.ztree li a{width:100%;float:left; text-decoration: none; margin-bottom:2px; height:24px}
+
+
+.ztree li span.button {display:none}
+.ztree li ul {padding-left:14px; float:left; margin-top:1px; padding-bottom:10px;}
+.ztree li a.curSelectedNode{ background-color: #FFFFFF;border: 0px solid #FFB951;}
+
+.ztree li a .box .value{position:absolute;right:0px;margin-right: 2px;}
+
+.ztree .arrows{
+    background: url("img/arrow_list03.png") no-repeat ;
+    height: 20px;
+    margin-top: 1px;
+    width: 8px;
+	float:left;
+}
+
+.ztree .arrows1{
+   background: none;
+}
+
+.ztree  .box{
+	width:100%; height:22px; line-height:22px; float:left; position:relative;border:#FFFFFF 1px solid;cursor: pointer;	
+}
+
+.ztree  .box1{
+	cursor: default;	
+}
+.ztree .box:hover{
+	border:#4791c8 1px solid;
+}
+
+.ztree .box1:hover{
+	border:0;
+}
+
+.ztree .cur .box:hover{
+	 border:#ffca93 1px solid;
+}
+
+.ztree .cur .box1:hover{
+	 border:0;
+}
+
+.ztree  .selectedNode .box{
+	 border:#ffca93 1px solid;
+}
+
+.ztree  .selectedNode .box1{
+	 border: 0;
+}
+
+.ztree p.ground{
+	background:#aed5f2; height:100%;white-space: nowrap; float:left;
+}
+.ztree .cur p.ground{
+	color:#4d4d4d;
+	background:#ffca93;
+	text-decoration: none; 
+height:100%;white-space: nowrap; float:left;
+}
+
+.ztree .cur p.ground1{
+	background:#aed5f2;
+}
+
+
+.ztree .box .text{
+	margin-left: 5px;
+	
+}
+
+.ztree li a .box .icon {
+    background: url("img/arrow_list01.png") no-repeat;
+    float: left;
+	width:  14px;
+    height: 14px;
+    margin-left:3px;
+    margin-top: 4px;
+	cursor: pointer;
+}
+
+.ztree li a .box .icon.on {
+    background: url("img/arrow_list02.png") no-repeat;	
+}
+.arrow_left_hijack {
+	position: absolute;
+	z-index: 500;
+	left: 0;
+	top: 0px;
+	width: 30px;
+	height: 30px;
+	background: url('img/arrow_left.png') no-repeat;
+	display: none;
+	margin-left: 5px;
+	cursor: pointer;
+	margin-top: 1px;
+}
+.iconEdit{width:20px;height:20px;background:url(img/browser_icon0910.png) no-repeat left -1061px;cursor:pointer;position:absolute;left: -20px;bottom: 2px;display: none;}
+.iconEdit div{width:60px;line-height:24px;height:24px;font-size:12px;text-align:center;color:#f3f3f3;position:absolute;top:28px;left:50%;margin-left:-30px;background:#333333;border-radius:3px;z-index:1000;display:none;}
+.iconEdit em{width:11px;height:7px;display:block;background:url(img/browser_icon0910.png) no-repeat left -1085px;position:absolute;top:-7px;left:50%;margin-left:-5px;}
+.iconEdit:hover div{display:block;}
+
+
+

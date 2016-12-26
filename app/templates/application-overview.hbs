@@ -1,0 +1,220 @@
+    <div class="container">
+		{{#ty-header menus=model.menu}}
+		{{/ty-header}}
+      <div class="bodyq tyc-container clear">
+		{{#ty-sidebar menus=model.menu.menu2 onExpanded=(action "onExpanded")}}{{/ty-sidebar}}
+			{{outlet}}
+			
+		<div class="tyc-main {{if isMin  '' 'tyc-main-min' }}">
+        <!--通知 str-->
+		<div class="tyc-main-header plr25">						
+					<div id="chosen">						
+						{{#ty-select data=apps}}{{/ty-select}}								
+					</div>					
+					<div class="top_date_w">
+						{{#ty-time}}{{/ty-time}}						
+					</div>
+						
+		</div>
+        <!--通知 end-->
+        <div class="tyc-main-content">
+			<div class="">
+		<div class="conright_min" style="width: 32%;">
+			<div class="chart_w01">
+				<div class="right_gray2 m_top10 newLensOptionTool"  chartId="apdex">
+					<div class="grayfont"><span class="icon_help_black basedonTip" title="{{t 'nb.tooltip.application.apdex'}}" ></span><span>{{ t "nb.message.application.overview.indicators"}}</span></div>
+				    <div class="grayicon_bg">
+						<div onmouseover="this.className='icon_view02'" onmouseout="this.className='icon_view01'" class="icon_view01" chartId="apdex"></div>
+						<div onmouseover="this.className='icon_report02'" onmouseout="this.className='icon_report01'" class="icon_report01" chartId="apdex"></div>
+						<div onmouseover="this.className='icon_add02'" onmouseout="this.className='icon_add01'" class="icon_add01 chartDashborad" chartId="apdex"></div>
+					</div>
+				</div>
+				<div class="chart_w01">
+					<div class="chart" id="apdex"  apdex="true"
+                         showApdexT="true"
+                         chartType="apdexT"
+                         toolTipMsg="nb.tooltip.application.apdex"
+                         forms="#applicationId .timeForm #instanceId"
+                         autoRefresh="true" style="text-align: center;"
+                         chartHeight="300"
+                         hchartSetting="{series:[{marker:{lineWidth:2,radius:2}}]}"
+						 chartWidth="98%" url="/report-server/highcharts-chart-data/LATEST/accounts/applications/charts/application-apdex.json"></div>
+				</div>
+			</div>
+
+			<div class="chart_w01">
+				<div class="right_gray2 m_top10 newLensOptionTool"  chartId="throughput">
+					<div class="grayfont"><span class="icon_help_black basedonTip" title="{{t 'nb.tooltip.application.throughput'}}" ></span><span>{{t 'nb.message.index.application.throughput'}}</span></div>
+				    <div class="grayicon_bg">
+						<div onmouseover="this.className='icon_view02'" onmouseout="this.className='icon_view01'" class="icon_view01"  chartId="throughput"></div>
+						<div onmouseover="this.className='icon_report02'" onmouseout="this.className='icon_report01'" class="icon_report01"  chartId="throughput"></div>
+						<div onmouseover="this.className='icon_add02'" onmouseout="this.className='icon_add01'" class="icon_add01 chartDashborad"   chartId="throughput"></div>
+					</div>
+				</div>
+				<div class="chart_w01">
+					<div class="chart" id="throughput"
+                        toolTipMsg="nb.tooltip.application.throughput"
+                        forms="#applicationId .timeForm #instanceId"
+                        autoRefresh="true" style="width: 100%;text-align: center;" chartHeight="300"
+                        hchartSetting="{series:[{marker:{lineWidth:2,radius:2}}]}"
+						chartWidth="98%" url="/report-server/highcharts-chart-data/LATEST/accounts/applications/charts/application-throughput.json"></div>
+				</div>
+			</div>
+		<!--
+			<%@include file="/WEB-INF/layouts/traces-mini.jsp"%>
+            <%@include file="/WEB-INF/layouts/events-mini.jsp"%>
+			-->  
+		{{#if (has-permission 'application|webAction|trace')}}			
+			<div class="right_gray2 m_top10 http1"  id="trace_title">
+				<div class="grayfont2"><span class="icon_help_black basedonTip" title="{{t 'nb.tooltip.application.webactiontrace.topn'}}" ></span><span>{{t "nb.message.application.actions.slowtracelist"}}</span></div>
+			</div>
+			<div style="width: 100%;float:left;"> 
+				<table id="trace" class="table_01 tablesorter" width="100%" border="0" cellspacing="0" cellpadding="0">
+					   <thead>
+						   <tr>
+							   <th style="text-align: left;min-width:115px;width:8%"><span>{{t "nb.message.application.actions.time"}}</span></th>
+							   <th id="webActionTraceTh" style="text-align: left;width:80%" ><span>{{t "nb.message.application.actions.webname"}}</span></th>
+							   <th style="text-align: right;min-width:130px;width:8%"><span>{{t "nb.message.application.actions.responsetime"}}(ms)</span></th>
+						   </tr>
+					   </thead>
+					   <tbody>
+					   </tbody>
+				</table>
+			</div>
+			{{/if}}
+			
+			
+			
+			
+		</div>
+
+		<div class="concenter" style="margin-right: none;width:66%;">
+			<div class="chart_w01">
+				<div class="right_gray2 m_top10 newLensOptionTool" >
+					<div class="grayfont"><span class="icon_help_black basedonTip" title="{{t 'nb.tooltip.application.application'}}" ></span><span>{{t "nb.message.application.overview.response.time"}}</span></div>
+				    <div class="grayicon_bg">
+						<div onmouseover="this.className='icon_view02'" onmouseout="this.className='icon_view01'"  chartId="httpAndNetwork" class="icon_view01"></div>
+						<div onmouseover="this.className='icon_report02'" onmouseout="this.className='icon_report01'"  chartId="httpAndNetwork" class="icon_report01"></div>
+						<div onmouseover="this.className='icon_add02'" onmouseout="this.className='icon_add01'" chartId="httpAndNetwork" params=''  class="icon_add01 chartDashborad" ></div>
+					</div>
+				</div>
+				<div class="chart_w01">
+					<div class="chart" id="httpAndNetwork"   toolTipMsg="nb.tooltip.application.application" forms="#applicationId .timeForm #instanceId" autoRefresh="true" style="width: 100%;text-align: center;" chartHeight="300"
+						chartWidth="98%" url="/report-server/highcharts-chart-data/LATEST/accounts/applications/charts/application-application.json"></div>
+				</div>
+			</div>
+
+			<div class="chart_w01 m_right_percent" style="width: 49%;">
+				<div class="right_gray2 m_top10 newLensOptionTool"  chartId="error">
+					<div class="grayfont"><span class="icon_help_black basedonTip" title="{{t 'nb.tooltip.application.errors'}}" ></span><span>{{t "nb.message.index.application.timeOut"}}</span></div>
+				    <div class="grayicon_bg">
+						<div onmouseover="this.className='icon_view02'" onmouseout="this.className='icon_view01'" class="icon_view01"  chartId="error"></div>
+						<div onmouseover="this.className='icon_report02'" onmouseout="this.className='icon_report01'" class="icon_report01"  chartId="error"></div>
+						<div onmouseover="this.className='icon_add02'" onmouseout="this.className='icon_add01'" class="icon_add01 chartDashborad"   chartId="error"></div>
+					</div>
+				</div>
+				<div class="chart_w01">
+					<div class="chart" id="error"   toolTipMsg="nb.tooltip.application.errors" forms="#applicationId .timeForm #instanceId" hchartSetting="{yAxis: [{gridLineColor: '#c0c0c0',gridLineDashStyle: 'ShortDot',gridLineWidth: 1,labels: {color: '#000000'},min: 0.0,tickColor: '#000000',title: {style: {color: '#000000'},text: null},floor: 0,ceiling: 100,tickUnit: '%'}]}" autoRefresh="true" style="width: 100%;text-align: center;" chartHeight="300"
+						chartWidth="98%" url="/report-server/highcharts-chart-data/LATEST/accounts/applications/charts/application-errors.json"></div>
+				</div>
+			</div>
+
+			<div class="chart_w01 m_left_percent" style="width: 49%;">
+				<div class="right_gray2 m_top10 newLensOptionTool"  chartId="topWebAction">
+					<div class="grayfont"><span class="icon_help_black basedonTip" title="{{t 'nb.tooltip.application.webaction.topn'}}" ></span><span>{{t "nb.message.application.overview.message.1"}}</span></div>
+				    <div class="grayicon_bg">
+						<div onmouseover="this.className='icon_view02'" onmouseout="this.className='icon_view01'" class="icon_view01" chartId="topWebAction"></div>
+						<div onmouseover="this.className='icon_report02'" onmouseout="this.className='icon_report01'" class="icon_report01" chartId="topWebAction"></div>
+						<div onmouseover="this.className='icon_add02'" onmouseout="this.className='icon_add01'" class="icon_add01 chartDashborad" chartId="topWebAction"></div>
+					</div>
+				</div>
+				<div class="chart_w01">
+					<div class="chart"
+                         id="topWebAction"
+                         toolTipMsg="nb.tooltip.application.webaction.topn"
+                         forms="#applicationId .timeForm #instanceId"
+                         onSeriesClick="topWebActionSeriesClick"
+                         autoRefresh="true" style="width: 100%;text-align: center;" chartHeight="300"
+                         hchartSetting="{series:[{marker:{lineWidth:1,radius:3}}]}"
+						chartWidth="98%" url="/report-server/highcharts-chart-data/LATEST/accounts/applications/charts/application-webaction-topn.json"></div>
+				</div>
+			</div>
+
+			<div class="right_gray m_top10">
+				<div class="grayfont">
+					<span class="icon_cpu"></span>{{t "nb.message.application.overview.server.resource"}}
+				</div>
+			</div>
+			<div class="chart_w01 m_right_percent" style="width: 49%;">
+				<div class="right_gray2 newLensOptionTool"  chartId="httpResponseTime">
+					<div class="grayfont"><span class="icon_help_black basedonTip" title="{{t 'nb.tooltip.application.cpu'}}" ></span><span>{{t 'nb.message.application.overview.cpu'}}</span></div>
+					<div class="grayicon_bg" >
+						<div onmouseover="this.className='icon_view02'" onmouseout="this.className='icon_view01'"  chartId="httpResponseTime" class="icon_view01"></div>
+						<div onmouseover="this.className='icon_report02'" onmouseout="this.className='icon_report01'"  chartId="httpResponseTime" class="icon_report01"></div>
+						<div onmouseover="this.className='icon_add02'" onmouseout="this.className='icon_add01'" chartId="httpResponseTime" class="icon_add01 chartDashborad" ></div>
+					</div>
+				</div>
+				<div class="chart_w01">
+					<div
+							id="httpResponseTime" toolTipMsg="nb.tooltip.application.cpu"
+							class="chart"
+							forms="#applicationId .timeForm #instanceId"
+							autoRefresh="true"
+							chartHeight="250"
+							chartWidth="98%"
+							hchartSetting="{series:[{marker:{lineWidth:2,radius:2}}]}"
+							url="/report-server/highcharts-chart-data/LATEST/accounts/applications/charts/application-cpu.json"
+							style="width: 100%;text-align: center;"
+						>
+					</div>
+				</div>
+			</div>
+			<div class="chart_w01 m_left_percent" style="width: 49%;">
+				<div class="right_gray2 newLensOptionTool"  chartId="activeDevice">
+					<div class="grayfont"><span class="icon_help_black basedonTip" title="{{t 'nb.tooltip.application.mem'}}" ></span><span>{{t "nb.message.application.overview.mem"}}</span></div>
+					<div class="grayicon_bg">
+						<div onmouseover="this.className='icon_view02'" onmouseout="this.className='icon_view01'" class="icon_view01" chartId="activeDevice"></div>
+						<div onmouseover="this.className='icon_report02'" onmouseout="this.className='icon_report01'" class="icon_report01" chartId="activeDevice"></div>
+						<div onmouseover="this.className='icon_add02'" onmouseout="this.className='icon_add01'" class="icon_add01 chartDashborad" chartId="activeDevice"></div>
+					</div>
+				</div>
+				<div class="chart_w01">
+					<div class="chart"  id="activeDevice"   toolTipMsg="nb.tooltip.application.mem"
+						 forms="#applicationId .timeForm #instanceId"
+						 autoRefresh="true"
+                         hchartSetting="{series:[{marker:{lineWidth:2,radius:2}}]}"
+						 chartWidth="98%"
+						 url="/report-server/highcharts-chart-data/LATEST/accounts/applications/charts/application-mem.json"
+						 style="width: 100%;text-align: center;" chartHeight="250"
+						></div>
+				</div>
+			</div>
+			<div class="chart_w01">
+				<table class="table_01  forTip tablesorter" id="tablesorter" width="100%" border="0"	cellspacing="0" cellpadding="0" role="grid">
+                    <thead>
+    					<tr>
+    						<th class="serverName" width="20%">{{t "nb.message.application.overview.name"}}</th>
+    						<th>Apdex</th>
+    						<th class="td_textalgin_r">{{t "nb.message.alarm.response.timeOut"}}(ms)</th>
+    						<th class="td_textalgin_r">{{t "nb.message.index.application.throughput"}}(rpm)</th>
+    						<th class="td_textalgin_r">{{t "nb.message.index.application.timeOut"}}(%)</th>
+    						<th class="td_textalgin_r">CPU{{t "nb.message.usageRate.name"}}(%)</th>
+    						<th class="td_textalgin_r">{{t "nb.message.application.overview.mem.used"}}(MB)</th>
+    					</tr>
+                    </thead>
+					<tbody id="serverList"></tbody>
+				</table>
+			</div>
+		</div>
+		
+		
+		
+    </div>
+		</div>
+		<div style="clear: both;"></div>
+		</div>
+		{{#ty-footer}}
+		{{/ty-footer}}
+	  </div>
+    </div>
+

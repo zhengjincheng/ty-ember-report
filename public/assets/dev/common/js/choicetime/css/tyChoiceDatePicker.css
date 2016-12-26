@@ -1,0 +1,117 @@
+.ty_calendar{ display:inline-block;}
+/******ÈÕÆÚÏÔÊ¾Ãæ°å******/
+.ty_calendar .show_date{ width:238px; border:1px solid #ccc;position:relative;}
+.ty_calendar .show_date h3{ height:36px; line-height:36px; text-align:center;border:2px solid #FFF; margin: 0 40px;}
+.ty_calendar .show_date ol{ border-bottom:1px solid #ccc; overflow:hidden;}
+.ty_calendar .show_date ol li{ width:34px; height:34px; float:left; text-align:center; line-height:30px; font-weight:bold;}
+.ty_calendar .show_date .dates { overflow:hidden;}
+.ty_calendar .show_date .dates li{ width:30px;height:30px; text-align:center; line-height:30px; float:left;border:2px solid #FFF;user-select:none;}
+/**.ty_calendar .show_date .week{ color:red;}**/
+.ty_calendar .show_date .pass{ color:#ccc;}
+.ty_calendar .show_date .future{ color:#ccc;}
+.ty_calendar .show_date .dates .disable{color:#ccc;}
+.ty_calendar .show_date .dates .enable{color:#333;}
+.ty_calendar .show_date .dates .enable:hover{ border:2px solid #3598DB; cursor:pointer;}
+.ty_calendar .show_date .dates .active{ background:#00A0E9;border:2px solid #00A0E9;color:#FFF;}
+.ty_calendar .show_date .prevYear{ position:absolute; left:0; top:3px; width:30px;height:30px; line-height:30px;
+                                   text-align:center;border:2px solid #FFF;user-select:none;}
+.ty_calendar .show_date .prevYear:hover{border:2px solid #00A0E9; cursor:pointer;}
+.ty_calendar .show_date .nextYear{ position:absolute; right:0; top:3px;width:30px;height:30px; line-height:30px;
+                                   text-align:center;border:2px solid #FFF;user-select:none;}
+.ty_calendar .show_date .nextYear:hover{border:2px solid #3598DB; cursor:pointer;}
+
+
+.ty_calendar .show_date .prevMonth{ position:absolute; left:36px; top:3px; width:30px;height:30px; line-height:30px;
+                                    text-align:center;border:2px solid #FFF;user-select:none;}
+.ty_calendar .show_date .prevMonth:hover{border:2px solid #00A0E9; cursor:pointer;}
+.ty_calendar .show_date .nextMonth{ position:absolute; right:36px; top:3px;width:30px;height:30px; line-height:30px;
+                                    text-align:center;border:2px solid #FFF;user-select:none;}
+.ty_calendar .show_date .nextMonth:hover{border:2px solid #3598DB; cursor:pointer;}
+.ty_calendar .show_date .hour,.ty_calendar .minute{ display:inline-block;}
+.ty_calendar .show_date .hour_label,.ty_calendar .minute_label{ float:left;height:16px;line-height:18px;padding-left:1em;}
+
+.ty_calendar .show_date .drag_box{ width:180px;height:22px; position:relative;}
+.ty_calendar .show_date .drag{ width:18px; height:24px; position:absolute; background:#F00; left:0px; cursor:pointer;
+                               top:-3px; text-align:center; background:#C2E4FF; text-align:center; line-height:24px; border:#42B1FF 1px solid; z-index:20;}
+.ty_calendar .show_date .drag_box_bg{ background:#F9F9F9; position:absolute; z-index:10; left:0; top:2px; width:100%; height:14px; border:solid 1px #D0D0D0;}							   
+/******ÔÂ·ÝÏÔÊ¾Ãæ°å******/
+.ty_calendar .show_month{ width:210px; border:1px solid #ccc;position:relative;}
+.ty_calendar .show_month h3{ height:36px; line-height:36px; text-align:center;border:2px solid #FFF; margin: 0 40px;}
+.ty_calendar .show_month h3:hover{border:2px solid #f60; cursor:pointer;}
+.ty_calendar .show_month .months { overflow:hidden;}
+.ty_calendar .show_month .months li{ width:66px; height:30px; text-align:center; line-height:30px; float:left;border:2px solid #FFF;}
+.ty_calendar .show_month .months li:hover{border:2px solid #f60; cursor:pointer;}
+.ty_calendar .show_month .months .active{ background:#f60;border:2px solid #f60;}
+.ty_calendar .show_month .prev{ position:absolute; left:0; top:0; width:36px;height:36px; line-height:36px;text-align:center;border:2px solid #FFF;}
+.ty_calendar .show_month .prev:hover{border:2px solid #f60; cursor:pointer;}
+.ty_calendar .show_month .next{ position:absolute; right:0; top:0;width:36px;height:36px; line-height:36px;text-align:center;border:2px solid #FFF;}
+.ty_calendar .show_month .next:hover{border:2px solid #f60; cursor:pointer;}
+/******Äê·ÝÏÔÊ¾Ãæ°å******/
+.ty_calendar .show_year{ width:210px; border:1px solid #ccc; position:relative;}
+.ty_calendar .show_year h3{ height:36px; line-height:36px; text-align:center;border:2px solid #FFF; margin: 0 40px;}
+.ty_calendar .show_year h3:hover{border:2px solid #f60; cursor:pointer;}
+.ty_calendar .show_year .years { overflow:hidden;}
+.ty_calendar .show_year .years li{ width:66px; height:40px; text-align:center; line-height:40px; float:left;border:2px solid #FFF;}
+.ty_calendar .show_year .years li:hover{ border:2px solid #f60; cursor:pointer;}
+.ty_calendar .show_year .week{ color:#f60;}
+.ty_calendar .show_year .pass{ color:#ccc;}
+.ty_calendar .show_year .future{ color:#ccc;}
+.ty_calendar .show_year .years .disable{color:blue;}
+.ty_calendar .show_year .years .enable{color:green;}
+.ty_calendar .show_year .years .active{ background:#f60;border:2px solid #f60;}
+.ty_calendar .show_year .prev{ position:absolute; left:0; top:0; width:36px;height:36px; line-height:36px;text-align:center;border:2px solid #FFF;}
+.ty_calendar .show_year .prev:hover{border:2px solid #f60; cursor:pointer;}
+.ty_calendar .show_year .next{ position:absolute; right:0; top:0;width:36px;height:36px; line-height:36px;text-align:center;border:2px solid #FFF;}
+.ty_calendar .show_year .next:hover{border:2px solid #f60; cursor:pointer;}
+
+.ty_chioceperiod .drag_box{width:475px;height:45px; position:relative; left:18px;}
+.ty_chioceperiod .drag_box_bg{background:#F9F9F9; position:absolute; width:100%; height:19px; z-index:10; top:22px; border:#D0D0D0 solid 1px;  overflow:hidden;}
+.ty_chioceperiod .drag_box_bg .drag_box_inner{ position:absolute; left:0; top:0; width:0; height:100%; background:#00A0E9; }/***333***/
+.ty_chioceperiod .drag{ width:15px; height:26px; position:absolute;left:0px; top:20px; text-align:center;z-index:20; background:url(../images/period_drag_bar.jpg) no-repeat;}
+.ty_chioceperiod .drag_label_box{width:500px;height:45px; position:relative;}
+.ty_chioceperiod .drag_label_box .label{ position:absolute; left:0; top:0; width:50px; height:30px; color:#B9B9B9;}
+.ty_chioceperiod .drag_label_box .active{color:#222222;}
+.ty_chioceperiod .drag_label_box .label div{ text-align:center;}
+.ty_chioceperiod .chioceperiod_label{padding-left:18px;}
+.ty_chioceperiod .showLabel{font-size:14px;}
+.ty_chioceperiod .line div{background:#cccccc;height:6px;width:1px;margin:4px auto;}
+.ty_chioceperiod .drag_label_box .active .line div{background:#222222;}
+.ty_choiceDatePicker .left,.ty_choiceDatePicker .right{ float:left;margin-left:13px;}
+.ty_choiceDatePicker .tab_content{ display:none; margin-top:10px;}
+.ty_choiceDatePicker .choiceDatePicker_tab_header{text-align:right;padding-right:18px;height:40px;}
+.ty_choiceDatePicker .choiceDatePicker_head{border-bottom:#C0C0C0 solid 1px;height:36px;margin-left:13px;margin-right:13px;line-height:36px;}
+.ty_choiceDatePicker .choiceDatePicker_head .title{font-weight:bold;}
+.ty_choiceDatePicker .choiceDatePicker_head .time_selection_close{float:right;margin-top:10px;width:20px;height:20px;background-position:0px -814px;}
+.ty_choiceDatePicker .choiceDatePicker_head .time_selection_close:hover{background-position:0px -845px;}
+
+.ty_choiceDatePicker .change_tab{width:36px;height:30px; display:inline-block; position:relative;}
+.ty_choiceDatePicker .change_tab .disable{background:url("../images/change_button_bg_disable.png") no-repeat;}
+
+.ty_choiceDatePicker .change_button_bg{width:36px;height:16px; position:absolute; left:0;top:18px;background:url("../images/change_button_bg.png") no-repeat;cursor:pointer;}
+.ty_choiceDatePicker .change_button{width:12px;height:12px;background:url("../images/change_button.png") no-repeat;margin-left:20px;margin-top:2px;}
+.ty_choiceDatePicker .change_tab .active{margin-left:5px;}
+.ty_choiceDatePicker .change_tab .disabled{}
+.ty_choiceDatePicker .bottom1{ text-align:center; padding-top:20px;padding-bottom:22px;}
+.ty_choiceDatePicker .bottom2{ text-align:center; padding-top:12px;padding-bottom:12px;}
+.ty_choiceDatePicker .ensure{ margin:0 auto; width:96px; height:40px; line-height:40px; cursor:pointer; background:#00a0e9;color:#FFF;font-family: Arial, Helvetica, sans-serif;font-weight:bold;}
+.ty_choiceDatePicker .ensure:hover{background:#3598db;}
+
+
+.ty_choiceDatePicker .tyDatePicker_label{ margin-bottom:10px;}
+.ty_choiceDatePicker .begin_tyDatePicker_text,.ty_choiceDatePicker .end_tyDatePicker_text{padding-left:8px; width:170px; height:30px;line-height:30px;display:inline-block;border:solid 1px #cccccc;}
+.ty_choiceDatePicker .tyDatePicker_label .l{width:60px; height:32px;line-height:32px;display:inline-block;text-align:right;}
+.ty_choiceDatePicker .choiceDatePicker_box{border:solid 1px #C0C0C0;background:#FFF;position:absolute;top:36px;width:518px;display:none;right:0;}
+.ty_choiceDatePicker { right:0;top:0;position:relative;z-index:230;display:inline-block;padding-left:20px;}
+.ty_choiceDatePicker .choiceDatePicker_menu{
+    height: 30px;
+    position: relative;
+    background: #0085c9;
+    border-radius: 3px;
+    cursor: pointer;color: #fff;padding:0 35px 0 10px;line-height:30px;}
+.ty_choiceDatePicker .choiceDatePicker_menu .box{min-width:140px;display:block;height:30px;line-height:30px;white-space:nowrap;}
+.ty_choiceDatePicker .choiceDatePicker_menu .e{top:-14px;}
+.ty_choiceDatePicker .choiceDatePicker_menu .icon{width:11px;height:6px;display:block;background:url(../images/tyc-arrow-white.png) no-repeat center 0;position:absolute;top:11px;right:10px;z-index:10;}
+.ty_choiceDatePicker .choiceDatePicker_menu .active{width:11px;height:6px;display:block;background:url(../images/tyc-arrow-white.png) no-repeat center -16px;position:absolute;top:11px;right:10px;z-index:10;}
+.ty_choiceDatePicker .selectTime_box{position:relative;width:0;height:0;top:0;height:0;}
+.ty_choiceDatePicker .selectTime_label{position:absolute;top:-35px;left:0;width:200px;padding-left:17px;}
+.ty_choiceDatePicker .choiceDatePicker_menu .span-c{margin:0 8px;}

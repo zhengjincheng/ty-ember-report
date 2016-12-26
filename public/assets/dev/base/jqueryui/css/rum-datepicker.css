@@ -1,0 +1,112 @@
+.rumdatepicker .ui-widget-content {
+	border: 1px solid #aaaaaa/*{borderColorContent}*/;
+	background: #ffffff/*{bgColorContent}*/ /*{bgImgUrlContent}*/ 50%/*{bgContentXPos}*/ 50%/*{bgContentYPos}*/ repeat-x/*{bgContentRepeat}*/;
+	color: #222222/*{fcContent}*/;
+}
+
+.rumdatepicker  .ui-widget-header {
+	border: 1px solid #aaaaaa/*{borderColorHeader}*/;
+	background: #3a3a3a/*{bgColorHeader}*/ /*{bgImgUrlHeader}*/ 50%/*{bgHeaderXPos}*/ 50%/*{bgHeaderYPos}*/ repeat-x/*{bgHeaderRepeat}*/;
+	color: #ffffff/*{fcHeader}*/;
+	font-weight: bold; height:22px;
+}
+
+
+
+.rumdatepicker .ui-state-default,.rumdatepicker .ui-widget-content .ui-state-default,.rumdatepicker .ui-widget-header .ui-state-default {
+   	  background: none repeat scroll 50% 50% #FFFFFF;
+   	  border: 1px solid #EEEEEE;
+   	  color: #5A5C5C;
+   	  font-weight: normal
+}
+
+
+.rumdatepicker .ui-state-hover,.rumdatepicker  .ui-widget-content .ui-state-hover,.rumdatepicker  .ui-widget-header .ui-state-hover,.rumdatepicker  .ui-state-focus,.rumdatepicker  .ui-widget-content .ui-state-focus,.rumdatepicker  .ui-widget-header .ui-state-focus {
+    background: none repeat-x scroll 50% 50% #3598DB;
+    border: 1px solid #EEEEEE;
+    color: #FFFFFF;
+    font-weight: normal;
+}
+
+
+.rumdatepicker .ui-state-highlight,.rumdatepicker .ui-widget-content .ui-state-highlight,.rumdatepicker .ui-widget-header .ui-state-highlight {
+    background: url("images/data_on.gif") repeat-x scroll 0 0 #E5E3E3;
+    border: 1px solid #D8D8D8;
+    color: #5A5C5C;
+}
+
+
+.rumdatepicker .ui-state-active,.rumdatepicker  .ui-widget-content .ui-state-active,.rumdatepicker  .ui-widget-header .ui-state-active {
+    background: none repeat-x scroll 50% 50% #3598DB;
+    border: 1px solid #EEEEEE;
+    color: #FFFFFF;
+    font-weight: normal;
+}
+
+.rumdatepicker  .ui-state-default a:visited {
+	color: #5a5c5c/*{fcDefault}*/;
+	text-decoration: none;
+}
+
+.rumdatepicker  .ui-widget-header .ui-state-focus {
+	border: 1px solid #eeeeee/*{borderColorHover}*/;
+	background: #3598db/*{bgColorHover}*//*{bgImgUrlHover}*/ 50%/*{bgHoverXPos}*/ 50%/*{bgHoverYPos}*/ repeat-x/*{bgHoverRepeat}*/;
+	font-weight: normal/*{fwDefault}*/;
+	color: #ffffff/*{fcHover}*/;
+}
+
+.rumdatepicker  .ui-widget-header .ui-state-active {
+	border: 1px solid #eeeeee/*{borderColorActive}*/;
+	background: #3598db/*{bgColorActive}*/ /*{bgImgUrlActive}*/ 50%/*{bgActiveXPos}*/ 50%/*{bgActiveYPos}*/ repeat-x/*{bgActiveRepeat}*/;
+	font-weight: normal/*{fwDefault}*/;
+	color: #ffffff/*{fcActive}*/;
+}
+
+.rumdatepicker  .ui-widget-header .ui-state-highlight {
+	border: 1px solid #d8d8d8/*{borderColorHighlight}*/;
+	background: #e5e3e3/*{bgColorHighlight}*/ url(images/data_on.gif)/*{bgImgUrlHighlight}*/ /*{bgHighlightXPos}*//*{bgHighlightYPos}*/ repeat-x/*{bgHighlightRepeat}*/;
+	color: #5a5c5c/*{fcHighlight}*/;
+}
+
+.rumdatepicker  .ui-widget-header .ui-icon {
+	background-image: url(images/ui-icons_222222_256x240_1.png)/*{iconsHeader}*/;
+}
+
+
+
+
+
+.rumdatepicker  .ui-datepicker {
+	width:210px;
+	display: none;
+}
+
+.rumdatepicker  .ui-datepicker th  {
+    background: none repeat scroll 0 0 #E3E3E3;
+    border: 0 none;
+    font-weight: bold;
+    height: 20px;
+    text-align: center;
+    padding:0;
+    font-size:12px;
+    font-family:"Arial Narrow";
+}
+
+
+.rumdatepicker  .ui-datepicker td {
+	border: 0;
+	padding: 0px;
+	border-collapse: collapse;
+
+}	
+
+.rumdatepicker  .ui-datepicker td a {
+	display: block;
+	padding:0px;
+	text-align: center;
+	text-decoration: none;
+	width:28px;
+	height:28px;
+	line-height:28px;
+}
+

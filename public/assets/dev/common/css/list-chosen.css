@@ -1,0 +1,12 @@
+
+.choose_down{
+	height:30px; line-height:30px; font-weight:bold; font-family:Arial, Helvetica, sans-serif;  float:left; position:relative; white-space:nowrap; z-index:500; cursor:pointer; position:relative;
+    background: #0085c9;
+    border-radius: 3px;
+    cursor: pointer;
+}
+.bg_color_yellow{background:none no-repeat scroll 0 0 #f39d12;}
+.bg_color_red{background:none no-repeat scroll 0 0 #e64d3d;}
+.bg_color_black{background:none no-repeat scroll 0 0 #0085c9}
+
+

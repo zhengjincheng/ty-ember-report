@@ -1,0 +1,12 @@
+<div id="appListContainer" class="choose_down bg_color_black" style="cursor: default;">
+							<div id="id-chosen" width="300px">
+								<input type="hidden" id="alarmStatus" value="bg_color_black">
+								<input type="hidden" id="applicationId" name="applicationId" value="127018">
+	<select id="idChosen" class="rumchosen " max_size="50" show_title="true" disable_search="false" search_contains="true" no_results_text="没有App可以匹配：" style="width:350px;" url="/report-server/application/" uri="/databases">			
+	<!--	<option value="127018" selected="selected">Overwatch-server-bkd</option>-->			
+				{{#each data as |item|}}
+				<option value="{{item.id}}">{{item.name}}</option>
+				{{/each}}
+	</select>
+</div>
+</div>

@@ -1,0 +1,47 @@
+.tyc-container02{width:auto;padding:30px;background:#eee;}
+.tyc-downlaod-server .icon{display:inline-block;*display:inline;*zoom:1;padding-left:22px;line-height:36px;background:url(../images/tyc-download-icon-server.png) no-repeat;}
+.tyc-downlaod-server .icon-java{background-position:-5px 0;}
+.tyc-downlaod-server .tyc-current .icon-java{background-position:-5px -36px;}
+.tyc-downlaod-server .icon-php{padding-left:26px;background-position:-5px -72px;}
+.tyc-downlaod-server .tyc-current .icon-php{background-position:-5px -108px;}
+.tyc-downlaod-server .icon-net{padding-left:30px;background-position:0 -144px;}
+.tyc-downlaod-server .tyc-current .icon-net{background-position:0 -180px;}
+.tyc-downlaod-server .icon-node{background-position:-5px -216px;}
+.tyc-downlaod-server .tyc-current .icon-node{background-position:-5px -252px;}
+.tyc-downlaod-server .icon-python{background-position:-5px -288px;}
+.tyc-downlaod-server .tyc-current .icon-python{background-position:-5px -324px;}
+.tyc-downlaod-server .icon-ruby{background-position:-5px -360px;}
+.tyc-downlaod-server .tyc-current .icon-ruby{background-position:-5px -396px;}
+.tyc-tab-div ul{width:100%;height:30px;padding-top:10px;}
+.tyc-tab-div li{min-width:95px;padding:0 15px;height:30px;line-height:30px;color:#666;text-align:center;cursor:pointer;border-radius:3px;float:left;margin-right:8px;background:#f9f9f9;}
+.tyc-tab-div li.current{background:#77bfab;color:#fff;}
+.tyc-tab-div02{padding-bottom:10px;}
+.tyc-tab-div02 p{line-height:30px;color:#cbcbcb;margin-bottom:10px;}
+.radio-title{min-width:70px;height:30px;line-height:30px;}
+.tyc-radio-div{height:30px;min-width:100px;}
+.tyc-radio-green{margin-top:7px;width:16px;height:16px;position:relative;}
+.tyc-radio-green input{position:absolute;top:0;left:0;z-index:10;visibility:visible;opacity:0;filter:alpha(opacity=0);outline:none;}
+.tyc-radio-green>span{width:12px;height:12px;display:block;border:2px solid #77bfab;border-radius:50%;position:absolute;top:0;left:0;z-index:2;}
+.tyc-radio-green>span:after{content:" ";width:8px;height:8px;display:block;background:#77bfab;border-radius:50%;position:absolute;top:2px;left:2px;z-index:5;display:none;}
+.tyc-radio-green input[type="radio"]:checked+span:after{display:block;}
+.tyc-radio-green-label{display:block;min-width:20px;height:30px;line-height:30px;margin-left:5px;} 
+.tyc-tab-div .tyc-radio-div{margin-left:20px;}
+.tyc-tab-ul{padding-top:25px;width:100%;}
+.tyc-tab-ul>li{margin-bottom:45px;border:1px solid #efefef;border-radius:3px;position:relative;overflow:hidden;}
+.tyc-tab-ul .li-left{min-width:130px;padding:10px 20px 20px;position:absolute;top:0;left:0;}
+.tyc-tab-ul .licon{width:auto;padding:15px 0 10px 70px;min-height:105px;margin:0 15px 0 170px;border-left:1px solid #efefef;position:relative;}
+.tyc-tab-ul .li-title{line-height:40px;font-size:20px;color:#0085c9;}
+.tyc-tab-ul p{line-height:24px;color:#cbcbcb;margin-bottom:8px;}
+.tyc-tab-ul .btn-download{width:100%;height:30px;line-height:30px;text-align:center;background:#0085c9;border-radius:3px;color:#fff;cursor:pointer;}
+.tyc-tab-ul .btn-download a{color:#fff;}
+.tyc-tab-ul .btn-download a:hover{color:#fff;text-decoration: none;}
+.tyc-tab-ul .btn-download:hover{opacity:0.8;filter:alpha(opacity=80);}
+.tyc-tab-dl{width:100%;}
+.tyc-tab-dl dt{line-height:24px;}
+.tyc-tab-dl dd{width:auto;padding:5px 20px;margin:10px 0;}
+.tyc-tab-dl .dd-code{background:#f9f9f9;border-radius:3px;min-width:700px;display:inline-block;*display:inline;*zoom:1;max-width:100%;}
+.tyc-tab-dl dd pre{line-height:24px;}
+.tyc-tabbox .btn-open,.tyc-tabbox .btn-close{min-width:20px;height:24px;line-height:24px;color:#0085c9;padding-right:15px;position:absolute;top:15px;right:0;z-index:10;cursor:pointer;}
+.tyc-tabbox .btn-close span{border-bottom:6px solid #0085c9;border-left:3px solid transparent;border-right:3px solid transparent;position:absolute;top:50%;right:5px;margin-top:-3px;z-index:10;}
+.tyc-tabbox .btn-open span{border-top:6px solid #0085c9;border-left:3px solid transparent;border-right:3px solid transparent;position:absolute;top:50%;right:5px;margin-top:-3px;z-index:10;}
+ 

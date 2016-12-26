@@ -1,0 +1,853 @@
+<div class="">
+		<div class=" sdkHelp_p_div">
+			<div class="newbuilt19_lay1">
+				<div class="newbuilt19_but1 goback" {{action 'back' }}>
+					返回
+				</div>
+				<div class="newbuilt19_lay1_div1">
+					新建应用
+				</div>
+			</div>
+
+			<!-- Step 1-->
+			<div class="newbuilt19_con" id="install_step_1" class="{{if isStepOne  " "  "hidden"}}">
+				<div class="newbuilt19_lay2">
+					<div class="newbuilt19_lay2_div1 newbuilt19_lay2_divcur1">
+						<span>1</span>下载探针
+					</div>
+					<div class="newbuilt19_lay2_div1">
+						<span>2</span>安装探针
+					</div>
+					<div class="newbuilt19_lay2_div2">等待探针连接</div>
+				</div>
+				<div class="newbuilt19_lay3_new">
+					<a target="_blank" class="doc_pdf_path doc_language"
+						href="http://192.168.2.83:8080/docs/java/1.5.0/tingyun-agent-java.pdf?a=1477378852275" >下载Java探针安装文档</a>
+				</div>
+				<div class="newbuilt19_lay4">
+					<div class="newbuilt19_lay4_div1">
+						<div class="newserver_div2">
+							<span>License Key</span>
+							<div class="new_notes">
+								<span></span>
+								<div>Licence Key 做为区别用户账号的唯一标识。java语言Licence Key已打包在探针中，不需要用户输入；php语言和.net语言Licence Key 请按照部署教程步骤提示录入。</div>
+							</div>
+							<span>:</span><strong class="licence_key_token" id="keyId"></strong>
+						</div>
+						<input type="hidden" id="licence_key_value"> <span
+							id="copyText" class="span_copy2"
+							onmousemove="do_copy('keyId','copyKey','copyText')">复制</span><span
+							id="copyKey" class="span_pass"></span>
+					</div>
+				</div>
+				<div class="newbuilt19_lay5" style="width:930px;">
+					<p class="newbuilt19_lay5_p1">
+						一.
+						选择安装的语言包：
+					</p>
+					<ul class="newserver_ul1">
+						<li class="li_01 li_01_cur" id="java"><span></span></li>
+						<li class="li_02" id="php"><span></span></li>
+						<li class="li_03" id="net"><span></span></li>
+
+						<li class="li_04" id="nodejs"><span></span></li>
+
+               			<li class="li_05" id="python"><span></span></li>
+
+						<li class="li_06" id="ruby"><span></span></li>
+					</ul>
+				</div>
+				<div id="javacontent">
+					<div class="newbuilt19_lay5"  id="jdkdownload_tab1" style="display: none;">
+						<p class="newbuilt19_lay5_p1">
+							二.
+							下载听云的探针
+						</p>
+						<a href="/report-server/application/0/1.5.0/downloadZip?a=1477378852275"
+							class="newserver_lay5_div1" style="display: inline-block;">下载JAVA探针</a>
+							<div class="tyc-tabbox-sp" >
+							<div class="tyc-tabcon-lay02">
+									<div class="tyc-tabcon-div01">
+										<em>WGET</em><span>(使用WGET方式下载的探针需手动填写license key) </span>
+									</div>
+									<div class="tyc-tabcon-div02">
+										<div class="tyc-tabcon-copydiv" id="jdk_copyurl03" >wget http://download.tingyun.com/agent/java/2.2.2/tingyun-agent-java-2.2.2.zip</div>
+										<span class="tyc-icon-copy" id="jdk_copytext03" onmouseover="do_copy_1('jdk_copyurl03','jdk_copymsg03','jdk_copytext03');"></span> <span
+											class="tyc-icon-copysucc" id="jdk_copymsg03">&nbsp;</span>
+									</div>
+								</div>
+								</div>
+					</div>
+					<div class="tyc-tabbox-sp"  id="jdkdownload_tab2" style="padding-left: 20px;padding-top: 20px;">
+						<div class="tyc-tabheader">
+							<div class="tyc-current">Jdk1.6-1.8</div>
+							<div>Jdk1.5</div>
+						</div>
+						<ul class="tyc-tabcon">
+							<li class="tyc-current">
+								<div>
+									<a href="/report-server/application/0/2.2.2/downloadZip?a=1477378852275" class="tyc-btn-download-java">下载JAVA探针</a>
+								</div>
+								<div class="tyc-tabcon-lay02">
+									<div class="tyc-tabcon-div01">
+										<em>WGET</em><span>(使用WGET方式下载的探针需手动填写license key) </span>
+									</div>
+									<div class="tyc-tabcon-div02">
+										<div class="tyc-tabcon-copydiv" id="jdk_copyurl01" >wget http://download.tingyun.com/agent/java/2.2.2/tingyun-agent-java-2.2.2.zip</div>
+										<span class="tyc-icon-copy" id="jdk_copytext01" onmouseover="do_copy_1('jdk_copyurl01','jdk_copymsg01','jdk_copytext01');"></span> <span
+											class="tyc-icon-copysucc" id="jdk_copymsg01">&nbsp;</span>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div>
+									<a href="/report-server/application/0/1.5.0/downloadZip?a=1477378852275" class="tyc-btn-download-java">下载JAVA探针2</a>
+								</div>
+								<div class="tyc-tabcon-lay02">
+									<div class="tyc-tabcon-div01">
+										<em>WGET</em><span>(使用WGET方式下载的探针需手动填写license key)</span>
+									</div>
+									<div class="tyc-tabcon-div02">
+										<div class="tyc-tabcon-copydiv" id="jdk_copyurl02">wget http://download.tingyun.com/agent/java/1.5.0/tingyun-agent-java-1.5.0.zip</div>
+										<span class="tyc-icon-copy" id="jdk_copytext02" onmouseover="do_copy_1('jdk_copyurl02','jdk_copymsg02','jdk_copytext02');"></span> <span
+											class="tyc-icon-copysucc"  id="jdk_copymsg02">&nbsp;</span>
+									</div>
+								</div>
+							</li>
+						</ul>
+<!-- 						<div class="btn-next">下一步</div> -->
+					</div>
+
+				</div>
+				<div id="phpcontent" style="display: none;">
+					<div class="newbuilt19_lay5">
+						<p class="newbuilt19_lay5_p1">
+							二.
+							下载听云的探针
+						</p>
+						<ul class="newserver_div6">
+							<li class="php-down leftbor current" id="rpm">
+								<div>
+									RPM安装包
+								</div>
+								<p style="">
+									(适用于RHEL,CentOS,SUSE操作系统)
+								</p>
+							</li>
+							<li class="php-down" id="deb">
+								<div>
+									DEB安装包
+								</div>
+								<p>
+									(适用于Debian,Ubuntu操作系统)
+								</p>
+							</li>
+							<li class="php-down" id="bin">
+								<div class="php_bin">
+									BIN安装包
+								</div>
+							</li>
+						</ul>
+						<div class="newserver_div7" style="float: none;width: 860px;">
+							<div>
+							<a id="downfile32" style="display: inline-block;"
+								class="newserver_lay5_div1">下载32位探针文件</a> <a
+								id="downfile64" style="display: inline-block;"
+								class="newserver_lay5_div1">下载64位探针文件</a>
+								</div>
+								<div class="tyc-tabbox-sp" style="float: left;">	
+									<div class="tyc-tabcon-lay02">
+										<div class="tyc-tabcon-div01">
+											<em>WGET</em><span>(使用WGET方式下载的探针需手动填写license key) </span>
+										</div>
+										<div class="tyc-tabcon-div02">
+											<div class="tyc-tabcon-copydiv" id="php_copyurl01" ></div>
+											<span class="tyc-icon-copy" id="php_copytext01" onmouseover="do_copy_1('php_copyurl01','php_copymsg01','php_copytext01');"></span> <span
+												class="tyc-icon-copysucc" id="php_copymsg01">&nbsp;</span>
+										</div>
+										<div class="tyc-tabcon-div02">
+											<div class="tyc-tabcon-copydiv" id="php_copyurl02" ></div>
+											<span class="tyc-icon-copy" id="php_copytext02" onmouseover="do_copy_1('php_copyurl02','php_copymsg02','php_copytext02');"></span> <span
+												class="tyc-icon-copysucc" id="php_copymsg02">&nbsp;</span>
+										</div>
+									</div>	
+								</div>
+
+
+						</div>
+					</div>
+				</div>
+				<div id="netcontent" style="display: none;">
+					<div class="newbuilt19_lay5">
+						<p class="newbuilt19_lay5_p1">
+							二.
+							下载听云的探针
+						</p>
+						<div>
+						<a href="http://192.168.2.20:8080/agent/dotnet/1.1.1/tingyun-agent-dotnet-1.1.1.exe?a=1477378852275"
+							style="display: inline-block;" class="newserver_lay5_div1">下载DOTNET探针</a>
+						</div>
+								<div class="tyc-tabbox-sp">	
+									<div class="tyc-tabcon-lay02">
+										<div class="tyc-tabcon-div01">
+											<em>WGET</em><span>(使用WGET方式下载的探针需手动填写license key) </span>
+										</div>
+										<div class="tyc-tabcon-div02">
+											<div class="tyc-tabcon-copydiv" id="net_copyurl01" >wget http://192.168.2.20:8080/agent/dotnet/1.1.1/tingyun-agent-dotnet-1.1.1.exe</div>
+											<span class="tyc-icon-copy" id="net_copytext01" onmouseover="do_copy_1('net_copyurl01','net_copymsg01','net_copytext01');"></span> <span
+												class="tyc-icon-copysucc" id="net_copymsg01">&nbsp;</span>
+										</div>
+										
+									</div>	
+								</div>
+					</div>
+				</div>
+
+				<div id="nodejscontent" style="display: none;">
+					<div class="newbuilt19_lay5">
+						<p class="newbuilt19_lay5_p1">
+							二.
+							下载听云的探针
+						</p>
+						<div>
+						<a href="http://192.168.2.20:8080/agent/nodejs/1.0.0/tingyun-agent-nodejs-1.0.0.tar.gz?a=1477378852275"
+							style="display: inline-block;" class="newserver_lay5_div1">下载NodeJs探针</a>
+						</div>		
+							<div class="tyc-tabbox-sp">	
+									<div class="tyc-tabcon-lay02">
+										<div class="tyc-tabcon-div01">
+											<em>WGET</em><span>(使用WGET方式下载的探针需手动填写license key) </span>
+										</div>
+										<div class="tyc-tabcon-div02">
+											<div class="tyc-tabcon-copydiv" id="nodejs_copyurl01" >wget http://192.168.2.20:8080/agent/nodejs/1.0.0/tingyun-agent-nodejs-1.0.0.tar.gz</div>
+											<span class="tyc-icon-copy" id="nodejs_copytext01" onmouseover="do_copy_1('nodejs_copyurl01','nodejs_copymsg01','nodejs_copytext01');"></span> <span
+												class="tyc-icon-copysucc" id="nodejs_copymsg01">&nbsp;</span>
+										</div>
+										
+									</div>	
+								</div>	
+					</div>
+				</div>
+
+				<div id="pythoncontent" style="display: none;">
+					<div class="newbuilt19_lay5">
+						<p class="newbuilt19_lay5_p1">
+							二.
+							下载听云的探针
+						</p>
+						<div>
+						<a href="http://192.168.2.20:8080/agent/python/1.0.1/tingyun-agent-python-1.0.1.tar.gz?a=1477378852275"
+							style="display: inline-block;" class="newserver_lay5_div1">下载Python探针</a>
+						</div>
+						<div class="tyc-tabbox-sp">	
+									<div class="tyc-tabcon-lay02">
+										<div class="tyc-tabcon-div01">
+											<em>WGET</em><span>(使用WGET方式下载的探针需手动填写license key) </span>
+										</div>
+										<div class="tyc-tabcon-div02">
+											<div class="tyc-tabcon-copydiv" id="python_copyurl01" >wget http://192.168.2.20:8080/agent/python/1.0.1/tingyun-agent-python-1.0.1.tar.gz</div>
+											<span class="tyc-icon-copy" id="python_copytext01" onmouseover="do_copy_1('python_copyurl01','python_copymsg01','python_copytext01');"></span> <span
+												class="tyc-icon-copysucc" id="python_copymsg01">&nbsp;</span>
+										</div>
+										
+									</div>	
+						</div>
+					</div>
+				</div>
+<!-- 				Ruby 第二步 -->
+				<div id="rubycontent" style="display: none;">
+					<div class="newbuilt19_lay5">
+						<p class="newbuilt19_lay5_p1">
+							二.
+							下载听云的探针
+						</p>
+						<div>
+						<a href="http://192.168.2.20:8080/agent/ruby/1.0.3/tingyun-agent-ruby-1.0.3.tar.gz?a=1477378852275"
+							class="newserver_lay5_div1" style="display: inline-block;">下载Ruby探针</a>
+						</div>
+						<div class="tyc-tabbox-sp">	
+									<div class="tyc-tabcon-lay02">
+										<div class="tyc-tabcon-div01">
+											<em>WGET</em><span>(使用WGET方式下载的探针需手动填写license key) </span>
+										</div>
+										<div class="tyc-tabcon-div02">
+											<div class="tyc-tabcon-copydiv" id="ruby_copyurl01" >wget http://192.168.2.20:8080/agent/ruby/1.0.3/tingyun-agent-ruby-1.0.3.tar.gz</div>
+											<span class="tyc-icon-copy" id="ruby_copytext01" onmouseover="do_copy_1('ruby_copyurl01','ruby_copymsg01','ruby_copytext01');"></span> <span
+												class="tyc-icon-copysucc" id="ruby_copymsg01">&nbsp;</span>
+										</div>
+										
+									</div>	
+						</div>
+						
+					</div>
+				</div>
+				<div class="newbuilt19_lay9">
+					<div class="newbuilt19_but2" {{action 'setStep' "step2"}}>下一步</div>
+				</div>
+			</div>
+			<!-- Step 2-->
+			<div class="newbuilt19_con" class="{{if isStepTow  " "  "hidden"}}"
+				id="install_step_2">
+				<div class="newbuilt19_lay2">
+					<div class="newbuilt19_lay2_div1 newbuilt19_lay2_divcur1">
+						<span>1</span>下载探针
+					</div>
+					<div class="newbuilt19_lay2_div1 newbuilt19_lay2_divcur1">
+						<span>2</span>安装探针
+					</div>
+					<div class="newbuilt19_lay2_div2">等待探针连接</div>
+				</div>
+				<div class="newbuilt19_lay3_new">
+					<a target="_blank" class="doc_pdf_path doc_language"
+						href="http://192.168.2.83:8080/docs/java/1.5.0/tingyun-agent-java.pdf?a=1477378852275">下载Java探针安装文档</a>
+				</div>
+				<div class="newbuilt19_lay4">
+					<div class="newbuilt19_lay4_div1">
+						<div class="newserver_div2">
+							<span>License Key</span>
+							<div class="new_notes">
+								<span></span>
+								<div>Licence Key 做为区别用户账号的唯一标识。java语言Licence Key已打包在探针中，不需要用户输入；php语言和.net语言Licence Key 请按照部署教程步骤提示录入。</div>
+							</div>
+							<span>:</span><strong class="licence_key_token" id="keyId2"></strong>
+						</div>
+						<input type="hidden" id="licence_key_value"> <span
+							id="copyText2" class="span_copy2"
+							onmousemove="do_copy('keyId2','copyKey2','copyText2')">复制</span><span
+							id="copyKey2" class="span_pass"></span>
+
+					</div>
+				</div>
+				<!-- Java -->
+				<div id="language_java">
+					<div class="newserver_tab1">
+						<div class="newserver_div3" id="java_lg_tab">
+							<div onclick="tabChange('java_lg_tab',1);" class="js_lg_tab_head no_rightbor current">自动安装</div>
+							<div onclick="tabChange('java_lg_tab',2);" class="js_lg_tab_head">手动安装</div>
+						</div>
+						<div class="newserver_div4" id="java_lg_tab_1">
+							<p class="newserver_notes2">
+								<strong class="word_orange">注：java探针支持JBoss,GlassFish,Jetty和Tomcat</strong>
+							</p>
+							<p class="newbuilt19_lay5_p1 fontSize14">一.选择你的系统环境</p>
+							<ul class="newserver_ul2">
+								<li><input checked="checked" class="select_env_java language_chosen_radio"
+									type="radio" id="mac" name="iradio" /><label for="mac">Linux
+										or Mac</label></li>
+								<li><input class="select_env_java" type="radio" id="win"
+									name="iradio" /><label for="win">Windows</label></li>
+							</ul>
+							<div id="mac_env">
+								<p class="newbuilt19_lay5_p1 fontSize14">
+									二.Linux or Mac
+									安装探针
+								</p>
+								<div class="newbuilt19_lay5_div2">
+									<p class="newbuilt19_lay5_p1">
+										1).&nbsp;
+										解压缩安装文件包到你的应用服务器的根目录：
+									</p>
+									<div class="newbuilt19_lay5_div21 newserver_div5">
+										<div id="mac_1" class="newbuilt19_copybox">unzip tingyun-agent-java-lastest.zip -d /path/to/appserver/</div>
+										<span id="copyText_1" class="span_copy"
+											onmouseover="do_copy('mac_1','copyMsg_1','copyText_1');"></span>
+										<span id="copyMsg_1" class="span_pass2"></span>
+										<p class="word_orange">注：“/path/to/appserver”是示例路径，请用户根据自身不同的环境修改正确的目录。</p>
+									</div>
+									<p class="newbuilt19_lay5_p1">2).&nbsp;在tingyun目录下执行自动安装程序：</p>
+									<div class="newbuilt19_lay5_div21">
+										<div id="mac_2" class="newbuilt19_copybox">cd /path/to/appserver/tingyun</div>
+										<span id="copyText_2" class="span_copy"
+											onmouseover="do_copy('mac_2','copyMsg_2','copyText_2');"></span>
+										<span id="copyMsg_2" class="span_pass2"></span>
+									</div>
+									<div class="newbuilt19_lay5_div21">
+										<div id="mac_3" class="newbuilt19_copybox">java -jar tingyun-agent-java.jar install</div>
+										<span id="copyText_3" class="span_copy" onmouseover="do_copy('mac_3','copyMsg_3','copyText_3');"></span>
+										<span id="copyMsg_3" class="span_pass2"></span>
+									</div>
+								</div>
+							</div>
+							<div id="win_env" style="display: none;">
+								<p class="newbuilt19_lay5_p1">
+									二.Window
+									安装探针
+								</p>
+								<div class="newbuilt19_lay5_div2">
+									<p class="newbuilt19_lay5_p1">
+										1).&nbsp;
+										打开
+										tingyun-agent-java.zip
+									</p>
+									<p class="newbuilt19_lay5_p1">
+										2).&nbsp;
+										拷贝tingyun目录到你的应用服务器的根目录
+									</p>
+									<p class="newbuilt19_lay5_p1">
+										3).&nbsp;
+										在命令行窗口执行：
+									</p>
+									<div class="newbuilt19_lay5_div21">
+										<div id="win_1" class="newbuilt19_copybox">cd tingyun</div>
+										<span id="copyText_4" class="span_copy"
+											onmouseover="do_copy('win_1','copyMsg_4','copyText_4');"></span>
+										<span id="copyMsg_4" class="span_pass2"></span>
+									</div>
+									<div class="newbuilt19_lay5_div21">
+										<div id="win_2" class="newbuilt19_copybox">java -jar tingyun-agent-java.jar install</div>
+										<span id="copyText_5" class="span_copy"
+											onmouseover="do_copy('win_2','copyMsg_5','copyText_5');"></span>
+										<span id="copyMsg_5" class="span_pass2"></span>
+									</div>
+								</div>
+							</div>
+							<div class="newbuilt19_lay5" style="padding-left: 0px;">
+								<p class="newbuilt19_lay5_p1 div_padd18">三.启动或者重新启动中间件服务</p>
+								<p class="div_padd30">1).&nbsp;中间件服务重新启动后，听云server探针监控才能生效。</p>
+								<p class="div_padd30">2).&nbsp;5分钟后，当您的java应用服务有http请求进入，性能数据将发送到听云Server</p>
+							</div>
+						</div>
+						<div class="newserver_div4" id="java_lg_tab_2"
+							style="display: none;">
+							<p class="newbuilt19_lay5_p1">一.手动安装</p>
+							<div class="newbuilt19_lay5_div2">
+								<p class="newbuilt19_lay5_p1">1).&nbsp;解压缩安装文件包到你的应用服务器的根目录(推荐)或指定目录</p>
+								<p class="newbuilt19_lay5_p1">2).&nbsp;备份tingyun目录下tingyun.properties文件</p>
+								<p class="newbuilt19_lay5_p1">3).&nbsp;在应用服务器的启动脚本中增加：</p>
+								<div class="newbuilt19_lay5_div21 newserver_div5">
+									<div id="win_3" class="newbuilt19_copybox">-javaagent:/path/to/tingyun/tingyun-agent-java.jar</div>
+									<span id="copyText_6" class="span_copy"
+										onmouseover="do_copy('win_3','copyMsg_6','copyText_6');"></span>
+									<span id="copyMsg_6" class="span_pass2"></span>
+									<p class="word_orange">注：“/path/to/”是示例路径，请用户根据自身不同的环境修改正确的目录。</p>
+								</div>
+							</div>
+							<div class="newbuilt19_lay5" style="padding-left: 0px;">
+								<p class="newbuilt19_lay5_p1 div_padd18">二.启动或者重新启动中间件服务</p>
+								<p class="div_padd30">1).&nbsp;中间件服务重新启动后，听云server探针监控才能生效。</p>
+								<p class="div_padd30">2).&nbsp;5分钟后，当您的java应用服务有http请求进入，性能数据将发送到听云Server</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- php -->
+				<div id="language_php" style="display: none;">
+					<div class="php_sys_select">
+						系统环境:
+						<label><input class="js_php_system_type" value="rpm" checked="checked" type="radio" name="php_system_type"/>RPM安装包</label>
+						<label><input class="js_php_system_type" value="deb" type="radio" name="php_system_type"/>DEB安装包</label>
+						<label><input class="js_php_system_type" value="bin" type="radio" name="php_system_type"/>BIN安装包</label>
+					</div>
+					<div id="rpm_env" style="display: none;">
+						<div class="newbuilt19_lay5">
+							<p class="newbuilt19_lay5_p1">
+								一.执行rpm安装
+							</p>
+							<div class="newbuilt19_lay5_div2">
+								<!-- 切换 -->
+								<div class="newbuilt19_lay5_div2_tab1">
+									<div class="newserver_div3" id="rpm_sysbit_tab">
+										<div onclick="tabChange('rpm_sysbit_tab',1);" class="no_rightbor current">32位操作系统</div>
+										<div onclick="tabChange('rpm_sysbit_tab',2);">64位操作系统</div>
+									</div>
+									<div class="newserver_div4" id="rpm_sysbit_tab_1">
+										<p class="newbuilt19_lay5_p1" style="font-size: 12px;">
+											32位版本rpm包安装：
+										</p>
+										<div class="newbuilt19_copybox">
+											<span id="rpm_1">sudo rpm -Uvh tingyun-agent-php-2.2.i386.rpm</span>
+										</div>
+										<span id="copyText_7" class="span_copy"
+											onmouseover="do_copy('rpm_1','copyMsg_7','copyText_7');"></span>
+										<span id="copyMsg_7" class="span_pass2"></span>
+										<div style="clear: both;"></div>
+									</div>
+									<div class="newserver_div4" id="rpm_sysbit_tab_2" style="display: none;">
+										<p class="newbuilt19_lay5_p1" style="font-size: 12px;">
+											64位版本rpm包安装：
+										</p>
+										<div class="newbuilt19_copybox">
+											<span id="rpm_2">sudo rpm -Uvh tingyun-agent-php-2.2.x86_64.rpm</span>
+										</div>
+										<span id="copyText_8" class="span_copy"
+											onmouseover="do_copy('rpm_2','copyMsg_8','copyText_8');"></span>
+										<span id="copyMsg_8" class="span_pass2"></span>
+										<div style="clear: both;"></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div id="deb_env" style="display: none;">
+						<div class="newbuilt19_lay5">
+							<p class="newbuilt19_lay5_p1">
+								一.执行deb安装
+							</p>
+							<div class="newbuilt19_lay5_div2">
+							<!-- 切换 -->
+								<div class="newbuilt19_lay5_div2_tab1">
+									<div class="newserver_div3" id="deb_sysbit_tab">
+										<div onclick="tabChange('deb_sysbit_tab',1);" class="no_rightbor current">32位操作系统</div>
+										<div onclick="tabChange('deb_sysbit_tab',2);">64位操作系统</div>
+									</div>
+									<div class="newserver_div4" id="deb_sysbit_tab_1">
+										<p class="newbuilt19_lay5_p1" style="font-size: 12px;">
+											32位版本deb包安装：
+										</p>
+										<div class="newbuilt19_copybox">
+											<span id="deb_1">sudo dpkg -i tingyun-agent-php-2.1.i386.deb</span>
+										</div>
+										<span id="copyText_9" class="span_copy"
+											onmouseover="do_copy('deb_1','copyMsg_9','copyText_9');"></span>
+										<span id="copyMsg_9" class="span_pass2"></span>
+										<div style="clear: both;"></div>
+									</div>
+									<div class="newserver_div4" id="deb_sysbit_tab_2" style="display: none;">
+										<p class="newbuilt19_lay5_p1" style="font-size: 12px;">
+											64位版本deb包安装：
+										</p>
+										<div class="newbuilt19_copybox">
+											<span id="deb_2">sudo dpkg -i tingyun-agent-php-2.1.x86_64.deb</span>
+										</div>
+										<span id="copyText_10" class="span_copy"
+											onmouseover="do_copy('deb_2','copyMsg_10','copyText_10');"></span>
+										<span id="copyMsg_10" class="span_pass2"></span>
+										<div style="clear: both;"></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div id="bin_env" style="display: none;">
+						<div class="newbuilt19_lay5">
+							<p class="newbuilt19_lay5_p1">
+								一.执行bin安装
+							</p>
+							<div class="newbuilt19_lay5_div2">
+								<!-- 切换 -->
+								<div class="newbuilt19_lay5_div2_tab1">
+									<div class="newserver_div3" id="sysbit_tab">
+										<div onclick="tabChange('sysbit_tab',1);" class="no_rightbor current">32位操作系统</div>
+										<div onclick="tabChange('sysbit_tab',2);">64位操作系统</div>
+									</div>
+									<div class="newserver_div4" id="sysbit_tab_1">
+										<p class="newbuilt19_lay5_p1" style="font-size: 12px;">
+											32位版本bin包安装：
+										</p>
+										<div class="newbuilt19_copybox">
+											<span id="bin_1">sudo ./tingyun-agent-php-2.1.i386.bin</span>
+										</div>
+										<span id="copyText_11" class="span_copy"
+											onmouseover="do_copy('bin_1','copyMsg_11','copyText_11');"></span>
+										<span id="copyMsg_11" class="span_pass2"></span>
+										<div style="clear: both;"></div>
+									</div>
+									<div class="newserver_div4" id="sysbit_tab_2" style="display: none;">
+										<p class="newbuilt19_lay5_p1" style="font-size: 12px;">
+											64位版本bin包安装：
+										</p>
+										<div class="newbuilt19_copybox">
+											<span id="bin_2">sudo ./tingyun-agent-php-2.1.x86_64.bin</span>
+										</div>
+										<span id="copyText_12" class="span_copy"
+											onmouseover="do_copy('bin_2','copyMsg_12','copyText_12');"></span>
+										<span id="copyMsg_12" class="span_pass2"></span>
+										<div style="clear: both;"></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="newbuilt19_lay5">
+						<p class="newbuilt19_lay5_p1">
+							二.初次安装必要的设置
+						</p>
+						<div class="newbuilt19_lay5_div2">
+							<div class="newbuilt19_lay5_div21">
+								<div class="newbuilt19_copybox">
+									<span id="sh_1">sudo sh /usr/bin/networkbench-install.sh</span>
+								</div>
+								<span id="copyText_13" class="span_copy"
+									onmouseover="do_copy('sh_1','copyMsg_13','copyText_13');"></span>
+								<span id="copyMsg_13" class="span_pass2"></span>
+							</div>
+							<p class="newbuilt19_lay5_p1" style="font-size: 12px;">
+								在接下来的录入界面输入license
+							</p>
+							<img src="/report-server/assets/images/u72.png" width="500">
+						</div>
+					</div>
+					<div class="newbuilt19_lay5">
+						<p class="newbuilt19_lay5_p1">
+							三.重启服务
+						</p>
+						<div class="newbuilt19_lay5_div2">
+							<div class="newbuilt19_lay5_div21">
+								<p class="newbuilt19_lay5_p2">
+									重启php宿主服务器(apache, php-fpm)
+								</p>
+								<p class="newbuilt19_lay5_p2">
+									此后，当您的php后台服务有http请求进入，几分钟后性能数据将发送到听云Server。
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- net -->
+				<div id="language_net" style="display: none;">
+					<div class="newbuilt19_lay5">
+						<p class="newbuilt19_lay5_p1">一.安装文件</p>
+						<p class="newbuilt19_lay5_p2">双击安装包，选择安装路径，进行安装</p>
+					</div>
+
+					<div class="newbuilt19_lay5">
+						<p class="newbuilt19_lay5_p1">
+							二.配置license：
+						</p>
+						<p class="newbuilt19_lay5_p2">
+							启动
+							"NBUI.exe"，
+							配置
+							license
+						</p>
+						<img alt="app" width="245px" height="304px"
+							src="/report-server/assets/images/config_license.png" />
+					</div>
+					<div class="newbuilt19_lay5">
+						<p class="newbuilt19_lay5_p1">
+							三.重新启动你的应用
+						</p>
+						<p class="newbuilt19_lay5_p2">
+							点击“重启IIS（使用监控）”或者点击“重启IIS Express（使用监控）”
+						</p>
+					</div>
+				</div>
+				<!-- nodeJs -->
+
+				<div id="language_nodejs" style="display: none;">
+					<div class="newbuilt19_lay5">
+			        	<p class="newbuilt19_lay5_p1">一. 在你的应用程序根目录下，执行安装探针命令：</p>
+			            <div class="newbuilt19_lay5_div3">
+			            	<div class="newbuilt19_copybox" id="nodejs_1"> npm install tingyun-agent-nodejs-1.0.0.tar.gz</div>
+			            	<span id="copyText_14" class="span_copy"
+									onmouseover="do_copy('nodejs_1','copyMsg_14','copyText_14');"></span>
+								<span id="copyMsg_14" class="span_pass2"></span>
+			            </div>
+			            <p class="newbuilt19_lay5_p1">二. 修改配置文件信息：</p>
+			            <div class="newbuilt19_lay5_div3">
+			                <p class="newbuilt19_lay5_p1">1).执行配置命令，填写应用名和授权序号</p>
+			                <div class="newbuilt19_lay5_div21">
+			                    <div class="newbuilt19_copybox" id="nodejs_2">node node_modules/tingyun/setup.js</div>
+			                    <span id="copyText_15" class="span_copy"
+									onmouseover="do_copy('nodejs_2','copyMsg_15','copyText_15');"></span>
+								<span id="copyMsg_15" class="span_pass2"></span>
+			                </div>
+			                <p class="newbuilt19_lay5_p1" style="height:150px;width:600px;">2).setup.js会尝试自动在应用的根路径下创建tingyun.js文件, 并将 require('tingyun') 添加到应用主文件的首行。<br/>如果您的package.json中没有设置main参数，并且应用根路径下没有index.js文件，那么setup.js执行会失败，提示您需要手动将"require('tingyun')" 添加到主文件的首行。</p>
+			            </div>
+				        <p class="newbuilt19_lay5_p1">三. 启动或者重新启动应用服务器</p>
+				       	<div class="newbuilt19_lay5_div3">
+				            <p class="newbuilt19_lay5_p1">5分钟后，当您的node.js应用服务有http请求进入，性能数据将发送到听云Server</p>
+				        </div>
+			        </div>
+				</div>
+				<!-- python -->
+
+				<div id="language_python" style="display: none;">
+					<div class="newbuilt19_lay5">
+			        	<p class="newbuilt19_lay5_p1">一. 安装探针：</p>
+			            <div class="newbuilt19_lay5_div3">
+			            	<div class="newbuilt19_lay5_div31">
+			            		<div class="newbuilt19_copybox" id="python_1"> pip install tingyun  </div>
+			            		<span id="copyText_17" class="span_copy"
+									onmouseover="do_copy('python_1','copyMsg_17','copyText_17');"></span>
+								<span id="copyMsg_17" class="span_pass2"></span>
+			                </div>
+			                <div>或</div>
+			                <div class="newbuilt19_lay5_div31">
+			            		<div class="newbuilt19_copybox" id="python_1_2"> easy_install tingyun  </div>
+			            		<span id="copyText_17_1" class="span_copy"
+									onmouseover="do_copy('python_1_2','copyMsg_17_1','copyText_17_1');"></span>
+								<span id="copyMsg_17_1" class="span_pass2"></span>
+			                </div>
+			                <p class="word_orange">注：两种方式可以任选其一</p>
+			            </div>
+			            <p class="newbuilt19_lay5_p1">二. 生成本地配置文件：</p>
+			            <div class="newbuilt19_lay5_div3">
+			            	 <div class="newbuilt19_lay5_div31">
+			                    <div class="newbuilt19_copybox" id="python_2_1">tingyun-admin generate-config YourLicenseKey /tmp/tingyun.ini</div>
+			                    <span id="copyText_18_1" class="span_copy"
+									onmouseover="do_copy('python_2_1','copyMsg_18_1','copyText_18_1');"></span>
+								<span id="copyMsg_18_1" class="span_pass2"></span>
+			                </div>
+							<p class="word_orange">注："YourLicenseKey"是当前License key.“/tmp/tingyun.ini“是示例路径及文件名，请用户根据自身不同的环境修改正确的目录</p>
+			            </div>
+			            <p class="newbuilt19_lay5_p1">三. 设置探针配置文件环境变量：</p>
+			            <div class="newbuilt19_lay5_div3">
+			                <div class="newbuilt19_lay5_div31">
+			                    <div class="newbuilt19_copybox" id="python_3">export TING_YUN_CONFIG_FILE=/tmp/tingyun.ini </div>
+			                    <span id="copyText_19" class="span_copy"
+									onmouseover="do_copy('python_3','copyMsg_19','copyText_19');"></span>
+								<span id="copyMsg_19" class="span_pass2"></span>
+			                </div>
+			            </div>
+			            <p class="newbuilt19_lay5_p1">四. 嵌入探针重新启动应用：</p>
+			            <div class="newbuilt19_lay5_div3">
+			            	<div class="newbuilt19_lay5_div31">
+			                	<div class="newbuilt19_copybox" ><span id="python_5">tingyun-admin  run-program </span>您应用的启动命令  您应用启动参数</div>
+			                    <span id="copyText_21" class="span_copy"
+									onmouseover="do_copy('python_5','copyMsg_21','copyText_21');"></span>
+								<span id="copyMsg_21" class="span_pass2"></span>
+			                </div>
+			                <p class="word_orange">如：tingyun-admin  run-program ./uwsgi.sh start</p>
+			                <p class="newbuilt19_lay5_p1">5分钟后，当您的python应用服务有http请求进入，性能数据将发送到听云Server</p>
+			            </div>
+			        </div>
+				</div>
+				<!-- ruby -->
+				<div id="language_ruby" style="display: none;">
+					<div class="newbuilt19_lay5">
+						<p class="newbuilt19_lay5_p1">一. 安装</p>
+						<div class="newbuilt19_lay5_div3">
+							<div>1). 添加</div>
+							<div class="newbuilt19_lay5_div31">
+			            		<div class="newbuilt19_copybox" id="ruby_1">gem 'tingyun_rpm'</div>
+			            		<span id="copyText_30" class="span_copy"
+									onmouseover="do_copy('ruby_1','copyMsg_30','copyText_30');"></span>
+								<span id="copyMsg_30" class="span_pass2"></span>
+			                </div>
+							<div>到 /项目根路径/Gemfile 文件中。</div>
+						</div>
+						<div class="newbuilt19_lay5_div3">
+						<p class="newbuilt19_lay5_p1">2). 在应用根目录下执行以下命令</p>
+						<div class="newbuilt19_copybox" id="ruby_2">gem install /探针保存路径/tingyun_rpm.gem</div>
+						<span id="copyText_29" class="span_copy"
+									onmouseover="do_copy('ruby_2','copyMsg_29','copyText_29');"></span>
+								<span id="copyMsg_29" class="span_pass2"></span>
+						</div>
+					</div>
+
+					<div class="newbuilt19_lay5">
+						<p class="newbuilt19_lay5_p1">
+							二. 修改配置文件
+						</p>
+						<div class="newbuilt19_lay5_div3">
+						<p class="newbuilt19_lay5_p1">1). 拷贝配置文件tingyun.yml到 /项目路径/config 文件夹下。</p>
+						<p class="newbuilt19_lay5_p1">2). 修改属性license_key 为授权license_key。</p>
+						</div>
+					</div>
+					<div class="newbuilt19_lay5">
+						<p class="newbuilt19_lay5_p1">
+							三. 重启
+						</p>
+						<div class="newbuilt19_lay5_div3">
+						<p class="newbuilt19_lay5_p1">
+							5分钟后，当您的Ruby应用服务有http请求进入，性能数据将发送到听云Server
+						</p>
+						</div>
+					</div>
+				</div>
+				
+				<div class="newbuilt19_lay6 newbuilt19_lay10">
+					<div class="newbuilt19_but2" {{action 'setStep' "step1"}}>上一步</div>
+					<div class="newbuilt19_but2"  {{action 'setStep' "step3"}}>下一步</div>
+				</div>
+			</div>
+			<!-- Step 3-->
+			<div class="newbuilt19_con" class="{{if isStepThree  " "  "hidden"}}"
+				id="install_step_3">
+				<div class="newbuilt19_lay2">
+					<div class="newbuilt19_lay2_div1 newbuilt19_lay2_divcur1">
+						<span>1</span>下载探针
+					</div>
+					<div class="newbuilt19_lay2_div1 newbuilt19_lay2_divcur1">
+						<span>2</span>安装探针
+					</div>
+					<div class="newbuilt19_lay2_div2 newbuilt19_lay2_divcur2">等待探针连接</div>
+				</div>
+				<div class="newbuilt19_lay3_new">
+					<a target="_blank" class="doc_pdf_path doc_language"
+						href="http://192.168.2.83:8080/docs/java/1.5.0/tingyun-agent-java.pdf">下载Java探针安装文档</a>
+				</div>
+				<!-- 新增精度条 -->
+				<div class="" style="padding:5px 0 20px 65px;">
+					<div><font color="red">下载探针，正确安装探针后才能正常连接</font> </div>
+					<div>
+						<div style="float:left;">开始</div>
+						<div style="padding-left: 244px;float:left;">发现探针</div>
+						<div style="padding-left: 550px;">完成</div>
+					</div>
+					<div class="icon_install_jdt01" id="jdt_xk">
+<!-- 						<div id="jdt_xk01" class="icon_install_jdtauto"></div> -->
+					</div>
+				</div>
+				
+				<div class="newbuilt19_lay7">
+					<div class="newbuilt19_lay7_left" id="loading">
+
+					</div>
+					<div class="newbuilt19_lay7_right">
+						<p class="newbuilt19_lay5_p1 en_p1_height">等待5分钟，听云Server收到您的应用程序性能数据后，您的应用程序将会展示在应用列表中。</p>
+						<ul>
+							<li>如果在几分钟之内，你没有看到任何应用性能数据，也许你的安装有问题，可以按以下方式获得帮助：</li>
+							<li>1. 手动安装和执行部署脚本，并下载阅读《<a target="_blank" href="http://192.168.2.83:8080/docs/java/1.5.0/tingyun-agent-java.pdf?a=1477378852275"
+								class="doc_language doc_pdf_path">Java探针安装文档</a>》</li>
+							<li>2. 技术支持<a href="#">cs@tingyun.com</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="newbuilt19_lay6">
+					<div class="newbuilt19_but2" {{action 'setStep' "step2"}}>上一步</div>
+					<div class="newbuilt19_but2" {{action 'back' }}>返回应用列表</div>
+				</div>
+			</div>
+		</div>
+		<div class="floatRightDiv">
+			<div class="fRLayDiv01" id="video_title">
+				<div class="fRLay01">
+					探针安装教程
+					<div class="setupIcon"></div>
+				</div>
+				<div class="fRLay02" >
+					<div class="videoIcon" id="install_video"></div>
+				</div>
+			</div>
+		</div>
+		<div class="newserver_zz"></div>
+<div class="newserver_tc">
+		<span class="but_close"></span>
+		<div class="newtc_tit"><fmt:message key='nb.message.application.install.qa'></fmt:message>：</div>
+		<form id="reportQuestionForm" action="${ctx}/overview/application/question" method="post" enctype="multipart/form-data">
+			<textarea name="qa" id="qa"></textarea>
+			<div class="newtc_div1">
+					<span><fmt:message key='nb.message.application.install.upload'></fmt:message>：</span> <input type="file" name="file" class="newtc_input1" />
+					<!--  <div class="newtc_but1" onclick="uploadFile();">上传</div> -->
+					<em><fmt:message key='nb.message.application.install.text.17'></fmt:message></em> <strong id="fileMaxSizeError" style="display: none;"><fmt:message key='nb.message.application.install.text.18'></fmt:message></strong>
+			</div>
+			<input type="hidden" id="filePath" name="filePath" value="">
+			<input type="hidden" id="content_hidden" name="content" value="">
+			<table cellpadding="0" cellspacing="0" class="newtc_tab1">
+				<tr>
+					<td class="td1"><span><fmt:message key='nb.message.application.install.name'></fmt:message>：</span></td>
+					<td class="td2"><input type="text" name="name" id="name" class="newtc_input2"
+						placeholder="<fmt:message key='nb.message.application.install.input'></fmt:message>" /></td>
+					<td class="td3"><span><fmt:message key='nb.message.due.email'></fmt:message>：</span></td>
+					<td class="td4"><input type="text" name="email" id="email" class="newtc_input2"
+						placeholder="<fmt:message key='nb.message.application.install.text.19'></fmt:message>" /></td>
+				</tr>
+				<tr>
+					<td class="td1"><span><fmt:message key='nb.message.mailtemplate.expiration.phone'></fmt:message>：</span></td>
+					<td class="td2"><input type="text" name="phone" id="phone" class="newtc_input2"
+						placeholder="<fmt:message key='nb.message.application.install.phone'></fmt:message>" /></td>
+					<td class="td3"><span style="width: 60px;display: inline-block;"><fmt:message key='nb.message.application.install.company'></fmt:message>：</span></td>
+					<td class="td4"><input type="text" name="company" id="company" class="newtc_input2"placeholder="<fmt:message key='nb.message.application.install.text.20'></fmt:message>" />
+					</td>
+				</tr>
+			</table>
+			<input style="display: none;" type="submit" value="Submit" />
+		</form>
+		<div id="submitBtn_process" class="newtc_but2" style="display:none;"><fmt:message key='nb.message.application.install.submiting'></fmt:message></div>
+		<div id="submitBtn" class="newtc_but2" onclick="submitQuestion();"><fmt:message key='nb.message.application.install.submit'></fmt:message></div>
+		<p class="newtc_p1"><fmt:message key='nb.message.application.install.text.21'></fmt:message></p>
+</div>
+</div>
+

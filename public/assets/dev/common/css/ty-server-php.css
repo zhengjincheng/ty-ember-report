@@ -1,0 +1,29 @@
+.tyc-tabbox-sp{width:720px;}
+.tyc-tabbox-sp .tyc-tabheader{height:54px;}
+.tyc-tabbox-sp .tyc-tabheader>div{min-width:170px;text-align:center;padding:0 13px;height:52px;line-height:52px;border-radius:3px 3px 0 0;border:1px solid #dedede;font-size:16px;cursor:pointer;float:left;}
+.tyc-tabbox-sp .tyc-tabheader>div+div{margin-left:5px;}
+.tyc-tabbox-sp .tyc-tabheader>div.tyc-current{background:#43a5e7;color:#fff;border:1px solid #43a5e7;}
+.tyc-tabbox-sp .tyc-tabcon{width:auto;padding:40px 20px 50px;border-radius:0 3px 3px;border:1px solid #dedede;background:#fff;position:relative;top:-1px;}
+.tyc-tabbox-sp .tyc-tabcon>li{width:100%;display:none;}
+.tyc-tabbox-sp .tyc-tabcon>li.tyc-current{display:block;}
+.tyc-btn-download-java{display:inline-block;height:48px;line-height:48px;font-size:16px;padding:0 25px 0 55px;border-radius:3px;background:url(../images/tyc-btn-download-icon.png) no-repeat 20px 10px #f2f2f2;}
+.tyc-btn-download-java:link,.tyc-btn-download-java:visited{color:#666;}
+.tyc-btn-download-java:hover{text-decoration:none;background:url(../images/tyc-btn-download-icon.png) no-repeat 20px -28px #43a5e7;color:#fff;}
+.tyc-btn-download-java:active{color:#fff;}
+.tyc-tabbox-sp .tyc-tabcon-lay02{margin-top:30px;}
+.tyc-tabbox-sp .tyc-tabcon-div01{line-height:28px;margin-bottom:13px;}
+.tyc-tabbox-sp .tyc-tabcon-div01 em{font-size:14px;}
+.tyc-tabbox-sp .tyc-tabcon-div01 span{font-size:14px;color:#999;}
+.tyc-tabbox-sp .tyc-tabcon-div02{height:45px;}
+.tyc-tabbox-sp .tyc-tabcon-copydiv{float:left;width:600px;padding-left:10px;height:40px;line-height:40px;border:1px solid #e2e2e2;border-radius:3px;background:#f7f7f7;color:#56b295;font-family:Arial;margin-right:10px;}
+.tyc-icon-copy{width:30px;height:22px;display:block;float:left;margin-top:10px;background:url(../images/tyc-btn-download-icon.png) no-repeat left -76px;cursor:pointer;}
+.tyc-icon-copy:hover{background:url(../images/tyc-btn-download-icon.png) no-repeat left -101px;}
+.tyc-icon-copysucc{float:left;height:22px;line-height:22px;margin-top:10px;color:#56b295;}
+.tyc-tabbox-sp .btn-next{margin:40px 0;width:135px;height:34px;line-height:34px;text-align:center;font-size:14px;color:#fff;border-radius:5px;background:#43a5e7;cursor:pointer;}
+.tyc-tabbox-sp .btn-next:hover{background:#69b7ec;}
+
+.tyc-prompt{width:550px;line-height:30px;padding:4px 0 4px 40px;border-radius:3px;background:url(../images/tyc-btn-download-icon.png) no-repeat 10px -123px #f9f2f4;color:#e95425;margin-bottom:15px;}
+.tyc-prompt a:link,.tyc-prompt a:visited{color:#666;text-decoration:underline;}
+.tyc-prompt a:hover{color:#0085c9;}
+.tyc-prompt a:active{color:#0085c9;}
+.tyc-prompt02{width:537px;line-height:30px;padding:4px 0 4px 53px;border-radius:3px;background:url(../images/tyc-btn-download-icon.png) no-repeat 10px -161px #f9f2f4;color:#e95425;margin-bottom:15px;}

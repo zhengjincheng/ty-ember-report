@@ -1,0 +1,39 @@
+
+.clear:after{content:" ";display:block;height:0;clear:both;visibility:hidden;}
+.clear{*zoom:1;}
+.topologicalChart{position:absolute;width:100%;height:100%;z-index:10;}
+.topologicalChart .bar .box{position:absolute;width:9px;background:#f9f9f9;border:#d0d0d0 solid 1px;height:370px;top:20px;z-index:1;cursor:pointer;}
+.topologicalChart .bar .drag{width:15px;height:15px;background: url("img/09.png") no-repeat;position:absolute;left:-3px;top:355px;z-index:2;cursor: pointer;}
+.topologicalChart .bar .plus{position: absolute; top: 0px;}
+.topologicalChart .bar .plus span{display:inline-block;width:12px;height:12px; background: url("img/10.png") -2px -2px  no-repeat; cursor:pointer;}
+.topologicalChart .bar .plus .active{background: url("img/10.png") -2px -18px  no-repeat;}
+.topologicalChart .bar .minus{position: absolute; top: 394px;}
+.topologicalChart .bar .minus span{display:inline-block;width:12px;height:12px; background: url("img/10.png") -2px -35px  no-repeat;cursor:pointer;}
+.topologicalChart .bar .minus .active{background: url("img/10.png") -2px -51px  no-repeat;}
+.topologicalChart .bar .box .back{position: absolute;left:-1px; background:#31abfd;bottom:0; height:0px; width:9px;border:#00a0e9 1px solid;}
+.topologicalChart .bar{position:absolute;top:80px;left:60px;width:20px; height:400px;}
+.topologicalChart .sTopArrow{width:20px;height:10px;display:block;background:url(img/server0717_icon01.png) no-repeat left -209px;position:absolute;top:-9px;left:20px;z-index:100;}
+.topologicalChart .sBottomArrow{width:21px;height:14px;display:block;background:url(img/bottom.png) no-repeat;position:absolute;bottom:0px;left:20px;z-index:100;}
+.topologicalChart .sPosDiv{position:absolute;z-index:100;top:0;left:0;}
+.topologicalChart .sPosCon{padding:0 8px;width:390px;}
+.topologicalChart .sPosCon,.sChartDiv{border:1px solid #dbdbdb;-moz-border-radius:5px;-ms-border-radius:5px;-o-border-radius:5px;-webkit-border-radius:5px;border-radius:5px; -moz-box-shadow:1px 2px 10px #dbdbdb;-ms-box-shadow:1px 2px 10px #dbdbdb;-o-box-shadow:1px 2px 10px #dbdbdb;-webkit-box-shadow:1px 2px 10px #dbdbdb; box-shadow:1px 2px 10px #dbdbdb;margin:0 10px 10px 0;}
+.topologicalChart .sPosTable td{padding:15px 0 12px;}
+.topologicalChart .sTr01 td{border-bottom:1px solid #dbdbdb;}
+.topologicalChart .sPosTable div{height:24px;line-height:24px;}
+.topologicalChart .sDiv01 span{font-size:26px;font-family:Arial;font-weight:bold;color:#555555;}
+.topologicalChart .sDiv01 em{vertical-align:bottom;}
+.topologicalChart .iconDiv{position: absolute; top: 30px;left: 10px; z-index:100;}
+.topologicalChart .iconDiv{width:100%;height:22px;overflow:hidden;}
+.topologicalChart .iconDiv span{min-width:30px;margin-right:20px;padding-left:20px;height:22px;line-height:22px;font-size:12px;float:left;display:block;color:#666666;}
+.topologicalChart .iconBlue{background:url(img/server_icon0731.png) no-repeat left 3px;}
+.topologicalChart .iconOrange{background:url(img/server_icon0731.png) no-repeat left -18px;}
+.topologicalChart .iconRed{background:url(img/server_icon0731.png) no-repeat left -38px;}
+.topologicalChart .iconGray{background:url(img/server_icon0731.png) no-repeat left -58px;}
+.topologicalChart .iconDiv .iconKey{width:32px;padding-left:23px;border-radius:3px;background:url(img/server_icon0731.png) no-repeat 5px -99px;cursor:pointer;}
+.topologicalChart .iconDiv .iconKey:hover{color:#ffffff;background:url(img/server_icon0731.png) no-repeat 5px -79px #07afe9;}
+.topologicalChart .sButtTd{position:relative;}
+.topologicalChart .sPosTable .sSeeButt{width:50px;padding-left:5px;height:22px;line-height:22px;background:url(img/server0717_icon01.png) no-repeat 35px -241px;color:#555555;font-family:SimSun;position:absolute;bottom:12px;right:0;cursor:pointer;-moz-border-radius:2px;-ms-border-radius:2px;-o-border-radius:2px;-webkit-border-radius:2px;border-radius:2px;}
+.topologicalChart .sPosTable .sSeeButt:hover{background:url(img/server0717_icon01.png) no-repeat 35px -261px #07afe9;color:#ffffff;}
+.topologicalChart .sChartDiv{padding:15px;width:440px;height:435px;position:relative;}
+.topologicalChart .sChartDiv .sCloseButt{width:26px;height:26px;background:url(img/server0717_icon01.png) no-repeat left -286px;cursor:pointer;z-index:100;position:absolute;top:8px;right:8px;}
+.topologicalChart .sChartDiv .sCloseButt:hover{background:url(img/server0717_icon01.png) no-repeat left -315px;}

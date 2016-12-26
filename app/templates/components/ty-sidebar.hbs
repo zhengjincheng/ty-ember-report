@@ -1,0 +1,15 @@
+<div id="sidebar" class="tyc-sidebar {{if isExpanded '' 'tyc-sidebar-min'}}" style="height: 1076px;">
+		<div class="tyc-sidebar-cicon" mini="false" {{action 'toggleBody'}}>
+			<div>
+				<span class="tyc-sidebar-cicon01"></span>
+				<span class="tyc-sidebar-cicon02"></span>
+				<span class="tyc-sidebar-cicon03"></span>
+				<span class="tyc-sidebar-cicon04"></span>
+			</div>
+		</div>
+		<ul class="tyc-sidebar-nav">
+			{{#each menus as |menu|}}
+				<li>{{#link-to menu.id  class="tyc-sidebar-nav-a" activeClass="current" }}   <span class="tyc-sidebar-icon {{menu.icon}}"></span> <em class="tyc-siebar-text"><em class="tyc-sidebar-arrow"></em>{{menu.label}}</em> {{/link-to}}</li>
+			{{/each}}
+			</ul>
+      </div>

@@ -1,0 +1,114 @@
+/*左侧sidebar*/
+.tyc-sidebar{width:120px;box-shadow:0 0 6px 1px #d0d0d0;border:1px solid #d0d0d0;border-radius:0 3px 3px 0;background:#ffffff;float:left;}
+.tyc-sidebar-cicon{height:18px;padding:21px 0;cursor:pointer;border-bottom:1px solid #e5e5e5;}
+.tyc-sidebar-cicon>div{width:18px;height:18px;margin:0 auto;position:relative;}
+.tyc-sidebar-cicon span{width:6px;height:6px;display:block;background:#0085c9;position:absolute;}
+.tyc-sidebar-cicon01{top:0;left:0;}
+.tyc-sidebar-cicon02{top:0;right:0;}
+.tyc-sidebar-cicon03{bottom:0;left:0;}
+.tyc-sidebar-cicon04{bottom:0;right:0;}
+.tyc-sidebar-nav{width:100%;}
+.tyc-sidebar-nav>li{width:100%;height:60px;border-bottom:1px solid #e5e5e5;}
+.tyc-sidebar-nav-a{display:block;height:60px;box-sizing:border-box;-webkit-box-sizing:border-box;padding-top:7px;}
+.tyc-siebar-text{display:block;width:100%;height:20px;line-height:20px;text-align:center;color:#a0a0a0;}
+.tyc-sidebar-nav-a:hover{background:#0085c9;color:#ffffff;text-decoration:none;}
+.tyc-sidebar-arrow{border-style:solid;border-width:6px 6px 6px 0 ;border-color:transparent;border-right-color:#0085c9;border-left-color:transparent;position:absolute;top:50%;margin-top:-6px;left:-6px;z-index:500;}
+.tyc-sidebar-min .tyc-sidebar-nav-a{position:relative;padding-top:17px;}
+.tyc-sidebar-min .tyc-siebar-text{position:absolute;padding:0 10px;width:auto;min-width:20px;height:30px;line-height:30px;white-space:nowrap;background:#0085c9;color:#ffffff;border-radius:3px;position:absolute;top:50%;margin-top:-15px;left:65px;z-index:500;display:none;}
+.tyc-sidebar-min .tyc-sidebar-nav-a:hover .tyc-siebar-text{display:block;} 
+/*左侧sidebar缩小*/
+.tyc-sidebar-min{width:54px;box-shadow:0 0 6px 1px #d0d0d0;border:1px solid #d0d0d0;border-radius:0 3px 3px 0;background:#ffffff;float:left;}
+.tyc-sidebar-min .tyc-sidebar-cicon span{width:18px;height:3px;left:0;}
+.tyc-sidebar-min .tyc-sidebar-cicon01{top:1px;}
+.tyc-sidebar-min .tyc-sidebar-cicon02{top:7px;}
+.tyc-sidebar-min .tyc-sidebar-cicon03{bottom:2px;}
+.tyc-sidebar-min .tyc-sidebar-cicon04{display:none;}
+
+/*20160602 sidebar修改*/ 
+.tyc-sidebar-nav>li{height:auto;}
+.tyc-sidebar-nav-a{min-height:46px;padding-bottom:7px;height:auto;}
+.tyc-sidebar-nav-a.current{background:#0085c9;color:#fff;text-decoration:none;} 
+.tyc-sidebar-nav-a.current .tyc-siebar-text{color:#fff;}
+.tyc-siebar-text{height:auto;}
+.tyc-sidebar-min .tyc-siebar-text br{display:none;}
+.tyc-sidebar-min .tyc-sidebar-nav-a{padding-bottom:17px;}
+
+/*server sidebar*/
+.tyc-sidebar-icon{width:40px;height:26px;display:block;margin:0 auto;background:url(../images/tyc-sidebar-icon-server.png) no-repeat;}
+/*应用一览*/
+.tyc-sidebar-icon-overview{background-position:center 0;}
+.tyc-sidebar-nav-a:hover .tyc-sidebar-icon-overview,.tyc-sidebar-nav-a.current .tyc-sidebar-icon-overview{background-position:center -26px;}
+/*关键应用一览*/
+.tyc-sidebar-icon-key-overview{background-position:center -52px;}
+.tyc-sidebar-nav-a:hover .tyc-sidebar-icon-key-overview,.tyc-sidebar-nav-a.current .tyc-sidebar-icon-key-overview{background-position:center -78px;}
+/*仪表盘*/
+.tyc-sidebar-icon-dashboard{background-position:center -104px;}
+.tyc-sidebar-nav-a:hover .tyc-sidebar-icon-dashboard,.tyc-sidebar-nav-a.current .tyc-sidebar-icon-dashboard{background-position:center -130px;}
+/*应用警报列表*/
+.tyc-sidebar-icon-hornlist{background-position:center -156px;}
+.tyc-sidebar-nav-a:hover .tyc-sidebar-icon-hornlist,.tyc-sidebar-nav-a.current .tyc-sidebar-icon-hornlist{background-position:center -182px;}
+/*关键应用警报列表*/
+.tyc-sidebar-icon-key-hornlist{background-position:center -208px;}
+.tyc-sidebar-nav-a:hover .tyc-sidebar-icon-key-hornlist,.tyc-sidebar-nav-a.current .tyc-sidebar-icon-key-hornlist{background-position:center -234px;}
+/*情报汇总*/
+.tyc-sidebar-icon-summary{background-position:center -260px;}
+.tyc-sidebar-nav-a:hover .tyc-sidebar-icon-summary,.tyc-sidebar-nav-a.current .tyc-sidebar-icon-summary{background-position:center -286px;}
+/*应用拓扑*/
+.tyc-sidebar-icon-topology{background-position:center -312px;}
+.tyc-sidebar-nav-a:hover .tyc-sidebar-icon-topology,.tyc-sidebar-nav-a.current .tyc-sidebar-icon-topology{background-position:center -338px;}
+/*web应用过程*/
+.tyc-sidebar-icon-webaction{background-position:center -364px;}
+.tyc-sidebar-nav-a:hover .tyc-sidebar-icon-webaction,.tyc-sidebar-nav-a.current .tyc-sidebar-icon-webaction{background-position:center -390px;}
+/*数据库*/
+.tyc-sidebar-icon-database{background-position:center -416px;}
+.tyc-sidebar-nav-a:hover .tyc-sidebar-icon-database,.tyc-sidebar-nav-a.current .tyc-sidebar-icon-database{background-position:center -442px;}
+/*NoSQL*/
+.tyc-sidebar-icon-nosql{background-position:center -468px;}
+.tyc-sidebar-nav-a:hover .tyc-sidebar-icon-nosql,.tyc-sidebar-nav-a.current .tyc-sidebar-icon-nosql{background-position:center -494px;}
+/*外部应用*/
+.tyc-sidebar-icon-external{background-position:center -520px;}
+.tyc-sidebar-nav-a:hover .tyc-sidebar-icon-external,.tyc-sidebar-nav-a.current .tyc-sidebar-icon-external{background-position:center -546px;}
+/*后台任务*/
+.tyc-sidebar-icon-background{background-position:center -572px;}
+.tyc-sidebar-nav-a:hover .tyc-sidebar-icon-background,.tyc-sidebar-nav-a.current .tyc-sidebar-icon-background{background-position:center -598px;}
+/*错误率*/
+.tyc-sidebar-icon-wrong{background-position:center -624px;}
+.tyc-sidebar-nav-a:hover .tyc-sidebar-icon-wrong,.tyc-sidebar-nav-a.current .tyc-sidebar-icon-wrong{background-position:center -650px;}
+/*线程剖析*/
+.tyc-sidebar-icon-thread{background-position:center -676px;}
+.tyc-sidebar-nav-a:hover .tyc-sidebar-icon-thread,.tyc-sidebar-nav-a.current .tyc-sidebar-icon-thread{background-position:center -702px;}
+/*JVM*/
+.tyc-sidebar-icon-jvm{background-position:center -728px;}
+.tyc-sidebar-nav-a:hover .tyc-sidebar-icon-jvm,.tyc-sidebar-nav-a.current .tyc-sidebar-icon-jvm{background-position:center -754px;}
+/*应用环境*/
+.tyc-sidebar-icon-running{background-position:center -780px;}
+.tyc-sidebar-nav-a:hover .tyc-sidebar-icon-running,.tyc-sidebar-nav-a.current .tyc-sidebar-icon-running{background-position:center -806px;}
+/*视图*/
+.tyc-sidebar-icon-view{background-position:center -832px;}
+.tyc-sidebar-nav-a:hover .tyc-sidebar-icon-view,.tyc-sidebar-nav-a.current .tyc-sidebar-icon-view{background-position:center -858px;} 
+/*应用设置*/
+.tyc-sidebar-icon-setting{background-position:center -884px;}
+.tyc-sidebar-nav-a:hover .tyc-sidebar-icon-setting,.tyc-sidebar-nav-a.current .tyc-sidebar-icon-setting{background-position:center -910px;}
+/*自定义监测方法*/
+.tyc-sidebar-icon-undefined{background-position:center -936px;}
+.tyc-sidebar-nav-a:hover .tyc-sidebar-icon-undefined,.tyc-sidebar-nav-a.current .tyc-sidebar-icon-undefined{background-position:center -962px;}
+/*关键应用过程监控设置*/
+.tyc-sidebar-icon-key-setting{background-position:center -988px;}
+.tyc-sidebar-nav-a:hover .tyc-sidebar-icon-key-setting,.tyc-sidebar-nav-a.current .tyc-sidebar-icon-key-setting{background-position:center -1014px;}
+/*Web应用过程报表*/
+.tyc-sidebar-icon-webaction-report{background-position:center -1040px;}
+.tyc-sidebar-nav-a:hover .tyc-sidebar-icon-webaction-report,.tyc-sidebar-nav-a.current .tyc-sidebar-icon-webaction-report{background-position:center -1066px;}
+/*关键应用过程报表*/
+.tyc-sidebar-icon-key-report{background-position:center -1092px;}
+.tyc-sidebar-nav-a:hover .tyc-sidebar-icon-key-report,.tyc-sidebar-nav-a.current .tyc-sidebar-icon-key-report{background-position:center -1118px;}
+/*数据库报表*/
+.tyc-sidebar-icon-databasereport{background-position:center -1144px;}
+.tyc-sidebar-nav-a:hover .tyc-sidebar-icon-databasereport,.tyc-sidebar-nav-a.current .tyc-sidebar-icon-databasereport{background-position:center -1170px;}
+/*NoSQL报表*/
+.tyc-sidebar-icon-nosqlreport{background-position:center -1196px;}
+.tyc-sidebar-nav-a:hover .tyc-sidebar-icon-nosqlreport,.tyc-sidebar-nav-a.current .tyc-sidebar-icon-nosqlreport{background-position:center -1222px;}
+
+
+
+
+
